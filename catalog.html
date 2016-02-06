@@ -45,11 +45,69 @@
       font-size: 14px;
       width: 100%;
     }
-    .sorting-form {
+    .icecream-quick-view {
       display: none;
     }
-    .filter-icecream-sorting:hover .sorting-form {
+    .icecream-option:hover .icecream-quick-view {
       display: block;
+    }
+
+    .select {
+      display: inline-block;
+      width: 200px;
+      height: 30px;
+      line-height: 30px;
+      background: rgba(155,155,155,.6);
+      border-radius: 30px;
+      position: relative;
+    }
+    .select::after {
+      position: absolute;
+      content: "";
+      border-top: 8px solid #000;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom-width: 0;
+      right: 10px;
+      top: 13px;
+    }
+    .select input {
+      display: none;
+    }
+    #popular:checked ~ .select-text .select-text-1,
+    #cheap:checked ~ .select-text .select-text-2,
+    #expensive:checked ~ .select-text .select-text-3,
+    #fat:checked ~ .select-text .select-text-4 {
+      display: block;
+    }
+    #popular:checked ~ .select-drop [for="popular"],
+    #cheap:checked ~ .select-drop [for="cheap"],
+    #expensive:checked ~ .select-drop [for="expensive"],
+    #fat:checked ~ .select-drop [for="fat"] {
+      display: none;
+    }
+    .select-text div {
+      display: none;
+      padding: 0 20px;
+    }
+    .select-drop {
+      top: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      background: white;
+      display: none;
+    }
+    .select:hover .select-drop {
+      display: block;
+    }
+    .label-drop {
+      display: block;
+      line-height: 1.5;
+      padding: 3px 20px;
+    }
+    .label-drop:hover {
+      background: blue;
     }
 
   </style>
@@ -176,12 +234,24 @@
 
       <fieldset class="filter-icecream-sorting">
         <legend>Сортировка</legend>
-        <div class="sorting-current">по популярности</div>
-        <select class="sorting-form" name="sorting" size="3">
-          <option value="сначала недорогие">сначала недорогие</option>
-          <option value="сначала дорогие" selected>сначала дорогие</option>
-          <option value="по жирности">по жирности</option>
-        </select>
+        <div class="select">
+          <input type="radio" id="popular" name="sorting" value="popular" checked>
+          <input type="radio" id="cheap" name="sorting" value="popular">
+          <input type="radio" id="expensive" name="sorting" value="popular">
+          <input type="radio" id="fat" name="sorting" value="popular">
+          <div class="select-text">
+            <div class="select-text-1">по популярности</div>
+            <div class="select-text-2">сначала не дорогие</div>
+            <div class="select-text-3">сначала дорогие</div>
+            <div class="select-text-4">по жирности</div>
+          </div>
+          <div class="select-drop">
+            <label class="label-drop" for="popular">по популярности</label>
+            <label class="label-drop" for="cheap">сначала не дорогие</label>
+            <label class="label-drop" for="expensive">сначала дорогие</label>
+            <label class="label-drop" for="fat">по жирности</label>
+          </div>
+        </div>
       </fieldset>
 
       <div class="filter-icecream-price">
@@ -224,7 +294,7 @@
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <a href="#"><img src="#" width="" height="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
           </div>
           <div class="icecream-price">
             310 <span class="icecream-price-P"></span>/кг
@@ -234,12 +304,15 @@
           <a href="#">Сливочное с апельсиновым
             джемом и цитрусовой стружкой</a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочно-кофейное с кусочками шоколада">
+            <a href="#"><img src="#" width="" height="" alt="Сливочно-кофейное с кусочками шоколада"></a>
           </div>
           <div class="icecream-price">
             380 <span class="icecream-price-P"></span>/кг
@@ -249,12 +322,15 @@
           <a href="#">Сливочно-кофейное с
             кусочками шоколада</a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <a href="#"><img src="#" width="" height="" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
           </div>
           <div class="icecream-price">
             355 <span class="icecream-price-P"></span>/кг
@@ -265,12 +341,15 @@
             присыпкой из белого
             шоколада</a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочное крем-брюле с карамельной подливкой">
+            <a href="#"><img src="#" width="" height="" alt="Сливочное крем-брюле с карамельной подливкой"></a>
           </div>
           <div class="icecream-price">
             415 <span class="icecream-price-P"></span>/кг
@@ -281,12 +360,15 @@
             с карамельной
             подливкой</a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочное с брусничным джемом">
+            <a href="#"><img src="#" width="" height="" alt="Сливочное с брусничным джемом"></a>
           </div>
           <div class="icecream-price">
             325 <span class="icecream-price-P"></span>/кг
@@ -296,12 +378,15 @@
           <a href="#">Сливочное с
             брусничным джемом</a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочно-черничное с цельными ягодами черники">
+            <a href="#"><img src="#" width="" height="" alt="Сливочно-черничное с цельными ягодами черники"></a>
           </div>
           <div class="icecream-price">
             410 <span class="icecream-price-P"></span>/кг
@@ -312,12 +397,15 @@
             цельными ягодами
             черники </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочно-лимонное с карамельной присыпкой">
+            <a href="#"><img src="#" width="" height="" alt="Сливочно-лимонное с карамельной присыпкой"></a>
           </div>
           <div class="icecream-price">
             375 <span class="icecream-price-P"></span>/кг
@@ -328,12 +416,15 @@
             карамельной
             присыпкой </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочное с шоколадной стружкой">
+            <a href="#"><img src="#" width="" height="" alt="Сливочное с шоколадной стружкой"></a>
           </div>
           <div class="icecream-price">
             320 <span class="icecream-price-P"></span>/кг
@@ -343,12 +434,15 @@
           <a href="#">Сливочное с
             шоколадной стружкой </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочно-ванильное с кусочками шоколада">
+            <a href="#"><img src="#" width="" height="" alt="Сливочно-ванильное с кусочками шоколада"></a>
           </div>
           <div class="icecream-price">
             440 <span class="icecream-price-P"></span>/кг
@@ -358,12 +452,15 @@
           <a href="#">Сливочно-ванильное с
             кусочками шоколада </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочноe с ментоловым сиропом">
+            <a href="#"><img src="#" width="" height="" alt="Сливочноe с ментоловым сиропом"></a>
           </div>
           <div class="icecream-price">
             435 <span class="icecream-price-P"></span>/кг
@@ -373,12 +470,15 @@
           <a href="#">Сливочноe с
             ментоловым сиропом </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочное с кусочками черного шоколада">
+            <a href="#"><img src="#" width="" height="" alt="Сливочное с кусочками черного шоколада"></a>
           </div>
           <div class="icecream-price">
             355 <span class="icecream-price-P"></span>/кг
@@ -388,12 +488,15 @@
           <a href="#">Сливочное с кусочками
             черного шоколада </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
 
       <article class="icecream-option">
         <div class="icecream">
           <div class="icecream-image">
-            <img src="#" width="" height="" alt="Сливочное с мятным сиропом">
+            <a href="#"><img src="#" width="" height="" alt="Сливочное с мятным сиропом"></a>
           </div>
           <div class="icecream-price">
             420 <span class="icecream-price-P"></span>/кг
@@ -403,7 +506,11 @@
           <a href="#">Сливочное с мятным
             сиропом </a>
         </h3>
+        <div class="icecream-quick-view">
+          <a class="btn" href="#">Быстрый просмотр</a>
+        </div>
       </article>
+
     </div>
     <div class="pagination">
       <a class="prev disabled" href="#prev">Назад</a>
@@ -438,3 +545,4 @@
 </footer>
 </body>
 </html>
+
