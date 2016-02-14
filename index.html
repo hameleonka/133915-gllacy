@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Главная</title>
+    <link href="css/style.css" rel="stylesheet">
     <style>
       /**body {
       background: url("img/gllacy-index-1200.jpg") no-repeat 50% 0;
@@ -10,14 +11,8 @@
       margin-right: auto;
     }**/
 
-      .catalog-submenu {display: none;}
-      .catalog:hover .catalog-submenu {display: block;}
-      .user-search-form {display: none;}
-      .user-search:hover .user-search-form {display: block;}
-      .user-login-form {display: none;}
-      .user-login:hover .user-login-form {display: block;}
-      .user-cart-form {display: none;}
-      .user-cart:hover .user-cart-form {display: block;}
+
+
       .cart-number-of-items {display: none;}
       .user-cart:hover .cart-number-of-items {display: block;}
       .user-cart:hover .cart-empty {display: none;}
@@ -34,13 +29,15 @@
     </style>
   </head>
   <body>
+  <div class="page-background">
     <header class="main-header">
-      <div class="container-center">
+      <div class="container-center clearfix">
+
         <nav class="main-navigation">
           <div class="logo">
-            <img src="#" width="" height="" alt="logo-gllacy">
+            <img src="img/logo_gllacyshop.svg" width="154px" height="64px" alt="logo-gllacy">
           </div>
-          <ul>
+          <ul class="catalog-menu">
             <li class="catalog">
               <a href="#">Каталог</a>
                 <ul class="catalog-submenu">
@@ -71,7 +68,7 @@
         </nav>
         <div class="user-block">
           <div class="user-search">
-            <a class="search-link" href="#">?<!-- картинка- фон в ссылке или иконочный шрифт-->
+            <a class="search-link" href="#"><!-- картинка- фон в ссылке или иконочный шрифт-->
             </a>
             <div class="user-search-form">
               <form class="search-form" action="#" method="post" name="search-form">
@@ -101,7 +98,7 @@
             </div>
           </div>
           <div class="user-cart">
-            <a href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span> </a>
+            <a class="user-cart-link" href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span> </a>
             <div class="user-cart-form">
 
                 <table class="cart-form-table">
@@ -130,23 +127,25 @@
           </div>
         </div>
         <div class="contact-info">
-          <span class="contact-info-normal">С 10 до 20, ежедневно</span><span class="contact-info-bold">8 812 450-25-25</span>
+          <span class="contact-info-normal">С 10 до 20, ежедневно</span><br><span class="contact-info-bold">8 812 450-25-25</span>
         </div>
-      </div>
+          </div>
+
     </header>
-    <main class="container-center">
+    <div class="container-center">
+
       <div class="container-slider">
         <div class="slider">
 
           <div class="slider-option">
             <div class="slider-image">
-              <img src="img/slider_option1.png" width="1045" height="881" alt="slider-image1">
+              <img src="img/slider_option1.png" width="1046" height="881" alt="slider-image1">
             </div>
             <p>Крем-брюле и пломбир<br>
               с малиновым джемом</p>
           </div>
 
-          <div class="slider-option">
+         <!-- <div class="slider-option">
             <div class="slider-image">
               <img src="img/slider_option2.png" width="1046" height="845" alt="slider-image2">
             </div>
@@ -160,23 +159,27 @@
             </div>
             <p>Пломбир с помадкой<br>
               и клубничный щербет </p>
-          </div>
+          </div>-->
           <button class="btn btn-slider" type="button">Давайте оба!</button>
        </div>
       </div>
-      <div class="special-offers">
+      <div class="special-offers clearfix">
         <section class="special-offer malinka">
           <h2 class="special-offer-header">Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим
-            в ваш заказ банку малинового варенья бесплатно.</p>
+          в ваш заказ банку малинового варенья бесплатно.</p>
+          <div class="btn-special-offer">
           <a class="btn" href="#">Хочу варенье!</a>
+          </div>
         </section>
 
         <section class="special-offer chocolate">
           <h2 class="special-offer-header">Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <div class="btn-special-offer">
           <a class="btn" href="#">Хочу шоколадки!</a>
+          </div>
         </section>
       </div>
       <div class="hit-list">
@@ -190,7 +193,7 @@
               ХИТ
             </div>
             <div class="hit-image-price">
-              310 <span class="hit-image-price-P"></span>/кг
+              310 <span class="hit-image-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -208,7 +211,7 @@
               ХИТ
             </div>
             <div class="hit-image-price">
-              380 <span class="hit-image-price-P"></span>/кг
+              380 <span class="hit-image-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -226,7 +229,7 @@
               ХИТ
             </div>
             <div class="hit-image-price">
-              355 <span class="hit-image-price-P"></span>/кг
+              355 <span class="hit-image-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -244,7 +247,7 @@
               ХИТ
             </div>
             <div class="hit-image-price">
-              415 <span class="hit-image-price-P"></span>/кг
+              415 <span class="hit-image-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -266,19 +269,19 @@
                 и проверенных временем технологий.</p>
           </div>
 
-          <div class="seo-content2">
-            <div class="seo-icon"></div>
-            <p class="seo-text">Для приготовления мороженого используются настоящие
-                сливки и молоко высочайшего качества. Все дополнительные
-                ингредиенты и добавки произведены из натурального,
-                экологически чистого сырья.</p>
-          </div>
-
-          <div class="seo-content3">
+           <div class="seo-content2">
             <div class="seo-icon"></div>
             <p class="seo-text">Закупка ингредиентов  производится только у проверенных
                 фермерских хозяйств и компаний, с которыми нас связывает
                 долговременное сотрудничество.</p>
+          </div>
+
+          <div class="seo-content3">
+            <div class="seo-icon"></div>
+            <p class="seo-text">Для приготовления мороженого используются настоящие
+              сливки и молоко высочайшего качества. Все дополнительные
+              ингредиенты и добавки произведены из натурального,
+              экологически чистого сырья.</p>
           </div>
 
           <div class="seo-content4">
@@ -289,7 +292,7 @@
           </div>
         </section>
 
-      <div class="wrapper-blognews-mailing">
+      <div class="wrapper-blognews-mailing clearfix">
         <section class="blog-news">
           <span>Новое в нашем блоге</span>
           <h3 class="main-news">
@@ -311,11 +314,12 @@
           </form>
         </section>
       </div>
-    </main>
+
+    </div>
     <section class="map">
-      <div class="conteiner-center">
+      <div class="container-center">
         <div class="map-image>">
-          <img src="#" width="" height="" alt="map-image">
+          <img src="img/map_with_pointer.jpg" width="1200" height="430" alt="map-image">
         </div>
         <div class="map-contacts">
           <p><span class="map-contacts-text-common">Адрес главного офиса и
@@ -336,10 +340,12 @@
           </fieldset>
           <button class="btn" type="submit">Отправить</button>
         </form>
+
       </div>
     </section>
     <footer class="main-footer">
-      <div class="container-center">
+      <div class="container-center clearfix">
+
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твиттер</a>
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
@@ -356,7 +362,9 @@
           <a href="https://htmlacademy.ru"> <img src="" width="" height="" alt="logo-HTML-academy"></a>
           <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>© 2016</p>
         </section>
-      </div>
+          </div>
+
     </footer>
+    </div>
   </body>
 </html>
