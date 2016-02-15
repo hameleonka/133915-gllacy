@@ -4,18 +4,8 @@
     <meta charset="utf-8">
     <title>Gllacy Главная</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <style>
-      /**body {
-      background: url("img/gllacy-index-1200.jpg") no-repeat 50% 0;
-      margin-left: auto;
-      margin-right: auto;
-    }**/
-
-
-
-      .cart-number-of-items {display: none;}
-      .user-cart:hover .cart-number-of-items {display: block;}
-      .user-cart:hover .cart-empty {display: none;}
       .feedback-form {display: none;}
       .btn .feedback:hover .feedback-form {display: block;}/** не показывается почему-то**/
 
@@ -25,11 +15,15 @@
       .search-form input, .login-form input,.mailing-form input, .feedback-form input
                         {font-size: 14px;
                          width:100%;}
-      .hit-icon {font-size:0;}
     </style>
   </head>
   <body>
-  <div class="page-background">
+
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
+
+  <div class="site-wrapper">
     <header class="main-header">
       <div class="container-center clearfix">
 
@@ -39,7 +33,7 @@
           </div>
           <ul class="catalog-menu">
             <li class="catalog">
-              <a href="#">Каталог</a>
+              <a href="#"><span>Каталог</span></a>
                 <ul class="catalog-submenu">
                   <li class="catalog-new">
                     <a href="#">Новинки</a>
@@ -59,10 +53,10 @@
                 </ul>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a href="#"><span>Доставка и оплата</span></a>
             </li>
             <li>
-              <a href="#">О компании</a>
+              <a href="#"><span>О компании</span></a>
             </li>
           </ul>
         </nav>
@@ -129,41 +123,33 @@
         <div class="contact-info">
           <span class="contact-info-normal">С 10 до 20, ежедневно</span><br><span class="contact-info-bold">8 812 450-25-25</span>
         </div>
-          </div>
 
-    </header>
-    <div class="container-center">
-
-      <div class="container-slider">
-        <div class="slider">
-
-          <div class="slider-option">
-            <div class="slider-image">
-              <img src="img/slider_option1.png" width="1046" height="881" alt="slider-image1">
-            </div>
-            <p>Крем-брюле и пломбир<br>
-              с малиновым джемом</p>
-          </div>
-
-         <!-- <div class="slider-option">
-            <div class="slider-image">
-              <img src="img/slider_option2.png" width="1046" height="845" alt="slider-image2">
-            </div>
-            <p>Шоколадный пломбир<br>
-              и лимонный сорбет </p>
-          </div>
-
-          <div class="slider-option">
-            <div class="slider-image">
-              <img src="img/slider_option3.png" width="1046" height="838" alt="slider-image3">
-            </div>
-            <p>Пломбир с помадкой<br>
-              и клубничный щербет </p>
-          </div>-->
-          <button class="btn btn-slider" type="button">Давайте оба!</button>
-       </div>
       </div>
+    </header>
+    <main class="container-center">
+
+      <div class="slider">
+        <div class="slide" id="slide1">
+            <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+            <a class="btn btn-slider" href="#">Давайте оба!</a>
+          </div>
+        <div class="slide" id="slide2">
+            <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+            <a class="btn btn-slider" href="#">Давайте оба!</a>
+          </div>
+        <div class="slide" id="slide3">
+            <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+            <a class="btn btn-slider" href="#">Давайте оба!</a>
+          </div>
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+      </div>
+
       <div class="special-offers clearfix">
+
         <section class="special-offer malinka">
           <h2 class="special-offer-header">Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим
@@ -181,7 +167,9 @@
           <a class="btn" href="#">Хочу шоколадки!</a>
           </div>
         </section>
+
       </div>
+
       <div class="hit-list">
 
         <article class="hit">
@@ -256,8 +244,9 @@
           </h3>
         </article>
 
-        </div>
-        <section class="seo">
+      </div>
+
+      <section class="seo">
           <div class="seo-header">
             Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
           </div>
@@ -290,9 +279,10 @@
                 в специальном термопаке, которая не дает мороженому
                 растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
           </div>
-        </section>
+      </section>
 
       <div class="wrapper-blognews-mailing clearfix">
+
         <section class="blog-news">
           <span>Новое в нашем блоге</span>
           <h3 class="main-news">
@@ -313,12 +303,16 @@
             </fieldset>
           </form>
         </section>
+
       </div>
 
-    </div>
+    </main>
+
     <section class="map">
+
       <div class="container-center">
-        <div class="map-image>">
+
+        <div class="map-image">
           <img src="img/map_with_pointer.jpg" width="1200" height="430" alt="map-image">
         </div>
         <div class="map-contacts">
@@ -343,6 +337,7 @@
 
       </div>
     </section>
+
     <footer class="main-footer">
       <div class="container-center clearfix">
 
@@ -353,17 +348,21 @@
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-about-us">
-          <a href="#">Для поставщиков</a>
+          <div class="about-us-column1">
+          <a href="#">Для поставщиков</a><br>
           <a href="#">О производстве</a>
-          <a href="#">Наши документы</a>
+          </div>
+          <div class="about-us-column2">
+          <a href="#">Наши документы</a><br>
           <a href="#">Экологические стандарты</a>
+            </div>
         </section>
         <section class="footer-copyright">
-          <a href="https://htmlacademy.ru"> <img src="" width="" height="" alt="logo-HTML-academy"></a>
+          <a href="https://htmlacademy.ru"> <img src="img/logo-html_academy.svg" width="108" height="37" alt="logo-HTML-academy"></a>
           <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>© 2016</p>
         </section>
-          </div>
 
+      </div>
     </footer>
     </div>
   </body>
