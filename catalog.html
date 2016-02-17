@@ -225,14 +225,22 @@
       </fieldset>
 
       <div class="filter-icecream-price">
-        <span class="price-text">Цена: <span class="price-value">100</span> руб. - <span class="price-value">500</span> руб.</span>
-        <div class="price-line"></div>
-        <div class="price-point min-position"></div>
-        <div class="price-point max-position"></div>
-        <div class="price-line-range"></div>
+
+        <div class="price-control">
+          <label class="min-price">Цена:<input name="min-price" type="text" value="100">руб.</label>
+          <label class="max-price">-<input name="max-price" type="text" value="500">руб.</label>
+        </div>
+        <div class="range-control">
+          <div class="scale">
+            <div class="bar" style="margin-left: 30px; width: 98px"></div>
+          </div>
+          <div class="range-toggle range-toggle-min"></div>
+          <div class="range-toggle range-toggle-max"></div>
+        </div>
+
       </div>
 
-      <fieldset class="filter-icecream-fatness">
+      <!--<fieldset class="filter-icecream-fatness">
         <legend>Жирность</legend>
         <input type="radio" id="id-0%" name="fatness" value="0%">
         <label for="id-0%">0%</label>
@@ -256,7 +264,7 @@
         <input type="checkbox" id="id-jams" name="filler" value="jams">
         <label for="id-jams">джемы</label>
       </fieldset>
-      <button class="btn" type="submit">Применить</button>
+      <button class="btn" type="submit">Применить</button>-->
 
     </form>
 
