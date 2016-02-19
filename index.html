@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>Gllacy Главная</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">-->
     <style>
       .feedback-form {display: none;}
-      .btn .feedback:hover .feedback-form {display: block;}/** не показывается почему-то**/
+      /**.btn .feedback:hover .feedback-form {display: block;}/** не показывается почему-то
 
       .search-form label,.login-form label,.mailing-form label, .feedback-form label
                          {font-size: 0;
                          display: block; }
       .search-form input, .login-form input,.mailing-form input, .feedback-form input
                         {font-size: 14px;
-                         width:100%;}
+                         width:100%;}**/
     </style>
   </head>
   <body>
@@ -81,11 +81,11 @@
                 <fieldset>
                   <label><input type="email" name="e-mail" value="" placeholder="Электронная почта">Электронная почта</label>
                   <label><input type="password" name="password" value="" placeholder="Пароль">Пароль</label>
-                  <div class="wrapper-button-links">
-                    <button class="btn" type="submit">Войти</button>
+                  <div class="wrapper-button-links clearfix">
+                    <button class="btn btn-login-form" type="submit">Войти</button>
                     <div class="user-login-links">
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Новая регистрация</a>
+                      <a href="#"><span>Забыли пароль?</span></a>
+                      <a href="#"><span>Новая регистрация</span></a>
                     </div>
                   </div>
                 </fieldset>
@@ -97,28 +97,29 @@
             <a class="user-cart-link" href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span> </a>
             <div class="user-cart-form">
 
-                <table class="cart-form-table">
+                <table class="cart-form-table" cellpadding="0">
                   <tr>
-                    <td class="cart-check"><span class="cart-check-simbol"></span></td>
-                    <td class="cart-image"><img src="#" width="" height="" alt="icon-hit1"></td>
+                    <td class="cart-check"></td>
+                    <td class="cart-image"><img src="#" width="33px" height="33px" alt="icon-hit1"></td>
                     <td class="cart-description">Пломбир с апельсиновым джемом</td>
                     <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 200 руб.</span></td>
                     <td class="cart-price-total">300 руб.</td>
                   </tr>
-                  <tr>
-                    <td class="cart-check"><span class="cart-check-simbol"></span></td>
-                    <td class="cart-image"><img src="#" width="" height="" alt="icon-hit3"></td>
+                  <tr class="accented">
+                    <td class="cart-check"></td>
+                    <td class="cart-image"><img src="#" width="33px" height="33px" alt="icon-hit3"></td>
                     <td class="cart-description">Клубничный пломбир с присыпкой<br>
                       из белого шоколада</td>
                     <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 300 руб.</span></td>
                     <td class="cart-price-total">450 руб.</td>
                   </tr>
                   <tr>
-                    <td class="cart-total" colspan="4">Итого: 750 руб.</td>
+                    <td class="cart-total" colspan="5">Итого: 750 руб.</td>
                   </tr>
                 </table>
-                <a href="#" class="btn btn-order">Оформить заказ</a>
-
+                <div class="btn-cart-form">
+                  <a href="#" class="btn btn-order">Оформить заказ</a>
+                </div>
             </div>
           </div>
         </div>
@@ -302,7 +303,7 @@
           <form class="mailing-form" action="#" method="post">
             <fieldset>
               <label><input type="email" name="e-mail" value="" placeholder="Электронная почта">Электронная почта</label>
-              <button class="btn" type="submit">Отправить</button>
+              <button class="btn btn-mailing-form" type="submit">Отправить</button>
             </fieldset>
           </form>
         </section>

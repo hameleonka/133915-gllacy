@@ -89,13 +89,13 @@
       </div>
       <ul class="catalog-menu">
         <li class="catalog">
-          <a href="#">Каталог</a>
+          <a class="catalog-current-page" href="#">Каталог</a>
           <div class="wrapper-catalog-submenu">
             <ul class="catalog-submenu">
-              <li class="catalog-new">
+              <li class="catalog-new ">
                 <a href="#">Новинки</a>
               </li>
-              <li class="catalog-current-page">
+              <li>
                 <a href="#">Сливочное</a>
               </li>
               <li>
@@ -192,8 +192,8 @@
 
   <div class="container-header">
     <div class="breadcrumbs">
-      <a href="index.html">Главная</a>
-      <a href="">Каталог</a>
+      <a href="index.html"><span>Главная</span></a>
+      <a href=""><span>Каталог</span></a>
       <a href="#" class="breadcrumbs-current-page">Сливочное</a>
     </div>
     <h1 class="container-header-header">Сливочное мороженое</h1>
@@ -240,31 +240,36 @@
 
       </div>
 
-      <!--<fieldset class="filter-icecream-fatness">
+      <fieldset class="filter-icecream-fatness">
         <legend>Жирность</legend>
-        <input type="radio" id="id-0%" name="fatness" value="0%">
-        <label for="id-0%">0%</label>
-        <input type="radio" id="id<10%" name="fatness" value="<10%" checked>
-        <label for="id<10%">до 10%</label>
-        <input type="radio" id="id<30%" name="fatness" value="<30%">
-        <label for="id<30%">до 30%</label>
-        <input type="radio" id="id>30%" name="fatness" value=">30%">
-        <label for="id>30%">выше 30%</label>
+        <div class="filter-icecream-fatness-wrapper">
+          <input type="radio" id="id-0%" name="fatness" value="0%">
+          <label for="id-0%">0%</label>
+          <input type="radio" id="id<10%" name="fatness" value="<10%" checked>
+          <label for="id<10%">до 10%</label>
+          <input type="radio" id="id<30%" name="fatness" value="<30%">
+          <label for="id<30%">до 30%</label>
+          <input type="radio" id="id>30%" name="fatness" value=">30%">
+          <label for="id>30%">выше 30%</label>
+        </div>
       </fieldset>
 
-      <fieldset class="filter-icecream-filler">
-        <input type="checkbox" id="id-chocolate" name="filler" value="chocolate" checked>
-        <label for="id-chocolate">шоколадные</label>
-        <input type="checkbox" id="id-sugar-powder" name="filler" value="sugar-powder" checked>
-        <label for="id-sugar-powder">сахарные присыпки</label>
-        <input type="checkbox" id="id-fruit" name="filler" value="fruit">
-        <label for="id-fruit">фрукты</label>
-        <input type="checkbox" id="id-syrups" name="filler" value="syrups">
-        <label for="id-syrups">сиропы</label>
-        <input type="checkbox" id="id-jams" name="filler" value="jams">
-        <label for="id-jams">джемы</label>
+     <fieldset class="filter-icecream-filler">
+       <legend>Наполнители</legend>
+       <div class="filter-icecream-filler-wrapper">
+          <input type="checkbox" id="id-chocolate" name="filler" value="chocolate" checked>
+          <label for="id-chocolate">шоколадные</label>
+          <input type="checkbox" id="id-sugar-powder" name="filler" value="sugar-powder" checked>
+          <label for="id-sugar-powder">сахарные присыпки</label>
+          <input type="checkbox" id="id-fruit" name="filler" value="fruit">
+          <label for="id-fruit">фрукты</label>
+          <input type="checkbox" id="id-syrups" name="filler" value="syrups">
+          <label for="id-syrups">сиропы</label>
+          <input type="checkbox" id="id-jams" name="filler" value="jams">
+          <label for="id-jams">джемы</label>
+       </div>
       </fieldset>
-      <button class="btn" type="submit">Применить</button>-->
+      <button class="filter-icecream-btn" type="submit">Применить</button>
 
     </form>
 
