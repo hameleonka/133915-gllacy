@@ -16,6 +16,13 @@ body {
   clear: both;
 }
 
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -26,7 +33,48 @@ body {
   background: -webkit-linear-gradient(0deg, #e74b36 0%, #f26843 100%);
   background: linear-gradient(0deg, #e74b36 0%, #f26843 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  cursor: pointer;
 }
+.btn:hover {
+  background: #f17d65;
+  background: -moz-linear-gradient(0deg, #ec6f5e 0%, #f58669 100%);
+  background: -webkit-linear-gradient(0deg, #ec6f5e 0%, #f58669 100%);
+  background: linear-gradient(0deg, #ec6f5e 0%, #f58669 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+  background: #d84d35;
+  background: -moz-linear-gradient(0deg, #e1613e 0%, #d84732 100%);
+  background: -webkit-linear-gradient(0deg, #e1613e 0%, #d84732 100%);
+  background: linear-gradient(0deg, #e1613e 0%, #d84732 100%);
+  box-shadow: inset 0px 2px 2px rgba(148,39,24,1);
+}
+
+.footer-copyright p a {
+  font-size: 12px;
+  font-weight: normal;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 13.33px;
+  border-bottom: 2px rgba(255, 255, 255, 0.4) solid;
+}
+
+.footer-copyright p a:hover,
+.hit-title a:hover,
+.icecream-title a:hover {
+  color:#ffbc9e;
+  border-bottom: 2px #ffbc9e solid;
+}
+
+.breadcrumbs a:active,
+.footer-copyright p a:active,
+.hit-title a:active,
+.icecream-title a:active{
+  color:#ec593c;
+  border-bottom: 2px #ec593c solid;
+}
+
 /**--------------------COMMON classes----------------------------**/
 
 /**---------------------Slider-index.html only-------------------**/
@@ -120,7 +168,7 @@ header .container-center {
 .wrapper-catalog-submenu {
   display: none;
   position: absolute;
-  z-index: 100;
+  z-index: 5;
   top: 32px;
   left: -6.62px;
   min-width: 142.81px;
@@ -169,17 +217,18 @@ header .container-center {
 
 .user-search, .user-login, .user-cart {
   display: inline-block;
+  vertical-align: top;
   position: relative;
   margin-left: 10.20px;
   font-size: 14px;
   font-weight: 500;
 }
 
-.search-link, .user-login-link, .user-cart-link {
+.user-login-link, .user-cart-link {
   display: block;
   position: relative;
-  padding-top: 8.06px;
-  padding-bottom: 8.22px;
+  height: 32px;
+  line-height: 32px;
   color: #ffffff;
   text-decoration: none;
   background: rgba(255,255,255,0.2);
@@ -189,27 +238,33 @@ header .container-center {
   box-sizing: border-box;
 }
 
-.search-link {
-  width: 17px;
-  height: 17px;
+.user-search-link {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
 }
 
-.search-link::before {
+.user-search-link::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 17px;
   height: 17px;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216.687%22%20height%3D%2216.688%22%20viewBox%3D%220%200%2016.687%2016.688%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22%u041B%u0443%u043F%u0430%22%20class%3D%22cls-1%22%20d%3D%22M931.155%2C40.747H930.4l-0.264-.261a6.212%2C6.212%2C0%2C1%2C0-.675.675l0.263%2C0.262v0.755l4.773%2C4.76%2C1.423-1.422Zm-5.731%2C0a4.291%2C4.291%2C0%2C1%2C1%2C4.3-4.291A4.294%2C4.294%2C0%2C0%2C1%2C925.424%2C40.747Z%22%20transform%3D%22translate%28-919.219%20-30.25%29%22/%3E%0A%3C/svg%3E%0A');
   background-repeat: no-repeat;
 }
 
-.search-link:hover:before {
+.user-search:hover .user-search-link::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 17px;
   height: 17px;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216.687%22%20height%3D%2216.688%22%20viewBox%3D%220%200%2016.687%2016.688%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23333%3B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22%u041B%u0443%u043F%u0430%22%20class%3D%22cls-1%22%20d%3D%22M280.155%2C663.747H279.4l-0.264-.261a6.218%2C6.218%2C0%2C1%2C0-.675.674l0.263%2C0.262v0.755l4.773%2C4.76%2C1.423-1.422Zm-5.731%2C0a4.292%2C4.292%2C0%2C1%2C1%2C4.3-4.291A4.294%2C4.294%2C0%2C0%2C1%2C274.424%2C663.747Z%22%20transform%3D%22translate%28-268.219%20-653.25%29%22/%3E%0A%3C/svg%3E%0A');
@@ -230,9 +285,10 @@ header .container-center {
   height: 19px;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220.063%22%20height%3D%2219%22%20viewBox%3D%220%200%2020.063%2019%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20fill-opacity%3A%200.99%3B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22%u0412%u0445%u043E%u0434%22%20class%3D%22cls-1%22%20d%3D%22M973%2C32.968v-0.96a3%2C3%2C0%2C0%2C1%2C3-3h11.059a3%2C3%2C0%2C0%2C1%2C3%2C3V44.985a3%2C3%2C0%2C0%2C1-3%2C3H976a3%2C3%2C0%2C0%2C1-3-3V44h2v2h13V31H975v1.968h-2Zm-3%2C8.046h6.029v2.743l7.027-5.3-7.027-5.3V35.9H970v5.114Z%22%20transform%3D%22translate%28-970%20-29%29%22/%3E%0A%3C/svg%3E%0A');
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.user-login-link:hover:before {
+.user-login:hover .user-login-link::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -259,20 +315,46 @@ header .container-center {
   background-repeat: no-repeat;
 }
 
-.user-cart-link:hover:before {
+.user-cart:hover .user-cart-link::before {
   width: 21px;
   height: 20px;
-  background-position: -5px -5px;
+  background-position: -10px -10px;
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
 }
 
-.user-search-form, .user-login-form, .user-cart-form {
+.user-search:hover .user-search-link,
+.user-login:hover .user-login-link,
+.user-cart:hover .user-cart-link {
+  background: #f8f7f4;
+  color: #313131;
+}
+
+.wrapper-user-search-form, .wrapper-user-login-form, .wrapper-user-cart-form {
   display: none;
   position: absolute;
-  z-index: 100;
+  z-index: 5;
+  top: 32px;
   right: 0;
-  top: 37px;
+  padding-top: 5px;
+}
+
+.user-search:hover .wrapper-user-search-form,
+.user-login:hover .wrapper-user-login-form,
+.user-cart:hover .wrapper-user-cart-form {
+  display: block;
+}
+
+.cart-number-of-items {
+  display: none;
+}
+
+.user-cart:hover .cart-number-of-items {
+  display: block;
+}
+
+.user-cart:hover .cart-empty {
+  display: none;
 }
 
 /**----------------user-search-form-------------------------**/
@@ -354,12 +436,6 @@ header .container-center {
 .login-form input[type="email"] {
   margin-bottom: 10px;
 }
-.login-form button {
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-}
 
 .login-form .wrapper-button-links {
   margin-top: 15px;
@@ -368,10 +444,10 @@ header .container-center {
 .login-form .btn-login-form {
   float:left;
   padding: 9px 30px;
-  border-radius: 30px;
+  border-radius: 35px;
   font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 15px;
-  font-weight: normal;
+  font-weight: bold;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -440,12 +516,21 @@ header .container-center {
   width: 10px;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2210.125%22%20height%3D%2210.126%22%20viewBox%3D%220%200%2010.125%2010.126%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23353535%3B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22_%u0425%22%20data-name%3D%22%20%u0425%22%20class%3D%22cls-1%22%20d%3D%22M650.86%2C96.139l0.708-.707L661%2C104.86l-0.707.707Zm9.438-.716%2C0.707%2C0.707-9.428%2C9.429-0.708-.708Z%22%20transform%3D%22translate%28-650.875%20-95.438%29%22/%3E%0A%3C/svg%3E%0A');
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 0 11px;
 }
-
 
 .cart-form-table .cart-image {
   width: 33px;
+  height: 33px;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+.cart-form-table tr:nth-child(1) .cart-image {
+  background-position: -132px -10px;
+}
+
+.cart-form-table tr:nth-child(2) .cart-image {
+  background-position: -185px -10px;
 }
 
 .cart-form-table .cart-description {
@@ -488,38 +573,11 @@ header .container-center {
   font-size: 15px;
   font-weight: bold;
   color: #fefefe;
-  border-radius: 30px;
+  border-radius: 35px;
 }
 
 
 /**----------------user-cart-form-------------------------**/
-
-.user-search:hover .search-link,
-.user-login:hover .user-login-link,
-.user-cart:hover .user-cart-link {
-  background: #f8f7f4;
-  color: #313131;
-}
-
-.user-search:hover .user-search-form,
-.user-login:hover .user-login-form,
-.user-cart:hover .user-cart-form {
-  display: block;
-}
-
-.cart-number-of-items {
-  display: none;
-}
-
-.user-cart:hover .cart-number-of-items {
-  display: block;
-}
-
-.user-cart:hover .cart-empty {
-  display: none;
-}
-
-
 .main-header .logo {
   position: absolute;
   top: 9.69px;
@@ -577,9 +635,7 @@ header .container-center {
   font-weight: bold;
   line-height: 41px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-  border-radius: 100px;
-
+  border-radius: 62px;
 }
 
 .slide-btn:hover {
@@ -699,7 +755,7 @@ h2.special-offer-header {
 
 .btn-special-offer a {
   padding: 12.99px 21.86px;
-  border-radius: 23px;
+  border-radius: 46px;
 }
 /**--------------------- special offers-index.html only-------------------**/
 
@@ -718,7 +774,6 @@ h2.special-offer-header {
   display: inline-block;
   vertical-align: top;
   margin-right: 20.43px;
-
   text-decoration: none;
   font-size: 14px;
   font-weight: normal;
@@ -727,6 +782,21 @@ h2.special-offer-header {
 }
 .breadcrumbs span {
   border-bottom: 2px rgba(255, 255, 255, 0.4) solid;
+}
+.breadcrumbs a:hover {
+  color:#ffbc9e;
+}
+
+.breadcrumbs span:hover {
+  border-bottom: 2px #ffbc9e solid;
+}
+
+.breadcrumbs a:active {
+  color:#ec593c;
+}
+
+.breadcrumbs span:active {
+  border-bottom: 2px #ec593c solid;
 }
 
 h1.container-header-header {
@@ -782,7 +852,7 @@ width:870px;
   height: 36px;
   line-height: 36px;
   background: rgba(255,255,255,.2);
-  border-radius: 30px;
+  border-radius: 36px;
   position: relative;
 }
 
@@ -918,7 +988,7 @@ width:870px;
   padding-left: 15px;
   padding-right: 15px;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
+  border-radius: 36px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -994,7 +1064,7 @@ width:870px;
   padding-right: 15px;
   line-height: 36px;
   background: rgba(255,255,255,.2);
-  border-radius: 30px;
+  border-radius: 36px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1081,7 +1151,7 @@ width:870px;
   padding-right: 15px;
   line-height: 36px;
   background: rgba(255, 255, 255, .2);
-  border-radius: 30px;
+  border-radius: 36px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1156,7 +1226,7 @@ width:870px;
   color: #ffffff;
   background: rgba(255, 255, 255, .2);
   border: 2px #FFFFFF solid;
-  border-radius: 30px;
+  border-radius: 36px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1182,12 +1252,11 @@ width:870px;
 
 /**--------------------- list-of-icecreams, hit-list-common for index.html, catalog.html-------------------**/
 .hit-list {
-  margin-bottom: 39.83px;
   font-size: 0;
 }
 
 .list-of-icecreams {
-  margin-bottom: 81.94px;
+  margin-bottom: 41.94px;
   font-size: 0;
 }
 
@@ -1196,6 +1265,7 @@ width:870px;
   vertical-align: top;
   max-width: 267px;
   margin-right: 26px;
+  margin-bottom: 39.83px;
   text-align: center;
 }
 
@@ -1224,10 +1294,9 @@ width:870px;
   height: 61px;
   z-index: 2;
   background-image: url("../img/spritesheet.png");
-  background-position: -36px -5px;
+  background-position: -51px -10px;
   background-repeat: no-repeat;
 }
-
 
 .hit-price, .icecream-price {
   position: absolute;
@@ -1248,7 +1317,7 @@ width:870px;
 }
 
 .hit-price-P, .icecream-price-P {
-  margin: 0 20px;
+  margin-right:36px;
   font-size: 0;
 }
 
@@ -1257,7 +1326,7 @@ width:870px;
   content: "";
   position: absolute;
   top: 9.36px;
-  left: 85.04px;
+  left: 82px;
   width: 31px;
   height: 36px;
   z-index: 3;
@@ -1267,6 +1336,7 @@ width:870px;
 
 
 .hit-title a, .icecream-title a {
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
@@ -1298,7 +1368,7 @@ width:870px;
   color: #ffffff;
   line-height: 24.3px;
   text-decoration: none;
-  border-radius: 14px;
+  border-radius: 35px;
 }
 
 .icecream-option:hover .icecream-quick-view {
@@ -1306,7 +1376,7 @@ width:870px;
 }
 
 .icecream-option:hover .icecream-image {
-  position: absolute;
+  position: relative;
   z-index: 4;
 }
 
@@ -1314,11 +1384,12 @@ width:870px;
   z-index: 5;
 }
 
-.icecream-option:hover .icecream-title {
+.icecream-option:hover .icecream-title a {
   z-index: 5;
 }
 
-/**--------------------- list-of-icecreams, hit-list-common for index.html, catalog.html-------------------**/
+
+  /**--------------------- list-of-icecreams, hit-list-common for index.html, catalog.html-------------------**/
 /**--------------------- pagination-catalog.html only-------------------**/
 .pagination {
   float:right;
@@ -1391,7 +1462,9 @@ a.prev, a.next {
   font-weight: 500;
   line-height: 30px;
 }
-
+.seo-icon {
+  font-size: 0;
+}
 .seo-text {
   padding: 0;
   margin: 0;
@@ -1444,8 +1517,6 @@ a.prev, a.next {
   background-repeat: no-repeat;
 }
 
-
-
 .seo-content3 .seo-icon::after {
   content: "";
   position: absolute;
@@ -1467,8 +1538,6 @@ a.prev, a.next {
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2247.406%22%20height%3D%2247.38%22%20viewBox%3D%220%200%2047.406%2047.38%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23323232%3B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22%u0413%u0440%u0430%u0434%u0443%u0441%u043D%u0438%u043A%22%20class%3D%22cls-1%22%20d%3D%22M637.023%2C1498.33a6.814%2C6.814%2C0%2C0%2C1-6.823-6.77%2C8.038%2C8.038%2C0%2C0%2C1%2C1.822-4.6v-14.84a5%2C5%2C0%2C0%2C1%2C10%2C0v14.91a7.629%2C7.629%2C0%2C0%2C1%2C1.778%2C4.53A6.775%2C6.775%2C0%2C0%2C1%2C637.023%2C1498.33Zm0-2a4.8%2C4.8%2C0%2C0%2C1-4.8-4.77%2C5.237%2C5.237%2C0%2C0%2C1%2C1.845-3.78v-15.66a3%2C3%2C0%2C0%2C1%2C6%2C0v15.72a5.092%2C5.092%2C0%2C0%2C1%2C1.754%2C3.72A4.8%2C4.8%2C0%2C0%2C1%2C637.023%2C1496.33Zm2.706-4.91a2.774%2C2.774%2C0%2C1%2C1-3.675-2.61v-16.84a0.949%2C0.949%2C0%2C0%2C1%2C1.9%2C0v16.87A2.765%2C2.765%2C0%2C0%2C1%2C639.729%2C1491.42ZM645%2C1475h4a1%2C1%2C0%2C0%2C1%2C0%2C2h-4A1%2C1%2C0%2C0%2C1%2C645%2C1475Zm0-4h4a1%2C1%2C0%2C0%2C1%2C0%2C2h-4A1%2C1%2C0%2C0%2C1%2C645%2C1471Zm0%2C8h4a1%2C1%2C0%2C0%2C1%2C0%2C2h-4A1%2C1%2C0%2C0%2C1%2C645%2C1479Zm0%2C4h4a1%2C1%2C0%2C0%2C1%2C0%2C2h-4A1%2C1%2C0%2C0%2C1%2C645%2C1483Zm-7.817-23.2a23.7%2C23.7%2C0%2C1%2C1-23.7%2C23.7A23.7%2C23.7%2C0%2C0%2C1%2C637.183%2C1459.8Zm0%2C45.4a21.7%2C21.7%2C0%2C1%2C1%2C21.7-21.7A21.722%2C21.722%2C0%2C0%2C1%2C637.183%2C1505.2Z%22%20transform%3D%22translate%28-613.469%20-1459.81%29%22/%3E%0A%3C/svg%3E%0A');
   background-repeat: no-repeat;
 }
-
-
 
 /**--------------------- SEO-index.html only-------------------**/
 /**--------------------- blog news_mailing-index.html only-------------------**/
@@ -1583,9 +1652,8 @@ a.prev, a.next {
   font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 600;
-  border-radius: 32px;
+  border-radius: 44px;
 }
-
 
 /**--------------------- blog news_mailing-index.html only-------------------**/
 /**--------------------- MAP-index.html only-------------------**/
@@ -1599,6 +1667,10 @@ a.prev, a.next {
   padding: 0;
   font-size: 0;
   line-height: 0;
+ background-image: url("../img/map_with_pointer.jpg");
+  width: 1200px;
+  height: 430px;
+  background-repeat: no-repeat;
 }
 
 .map .container-center {
@@ -1652,7 +1724,7 @@ p.map-contacts-part2 {
   display: block;
   margin: 0 auto;
   padding: 12px 31px;
-  border-radius: 19px;
+  border-radius: 44px;
   font-size: 17px;
   font-weight: 600;
   line-height: 19.55px;
@@ -1784,21 +1856,110 @@ p.map-contacts-part2 {
 }
 /**--------------------- FOOTER-common for index.html, catalog.html-------------------**/
 
+/**--------------------- modal-content-feedback for index.html-------------------**/
 
+.modal-content-feedback {
+  position: fixed;
+  z-index: 7;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 477px;
+  padding: 18px 24px 27px 24px;
+  color: #656565;
+  background: #f8f7f4;
+  border-radius: 9px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-.sprite-icon_cart_hover {
-  width: 21px;
-  height: 20px;
-  background-position: -5px -5px;
-  background-image: url("../img/spritesheet.png");
+.modal-content-close {
+  position: absolute;
+  z-index: 8;
+  top: 15px;
+  right: 15px ;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  font-size: 0;
+  background: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216.968%22%20height%3D%2216.969%22%20viewBox%3D%220%200%2016.968%2016.969%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cpath%20id%3D%22_%u0425%22%20data-name%3D%22%20%u0425%22%20class%3D%22cls-1%22%20d%3D%22M807.451%2C354.21l1.182-1.182%2C15.761%2C15.761-1.182%2C1.182Zm15.776-1.2%2C1.182%2C1.182-15.761%2C15.761-1.182-1.182Z%22%20transform%3D%22translate%28-807.438%20-353%29%22/%3E%0A%3C/svg%3E%0A');
   background-repeat: no-repeat;
 }
 
-
-.sprite-icon_map_pointer {
-  width: 218px;
-  height: 142px;
-  background-position: -107px -5px;
-  background-image: url("../img/spritesheet.png");
-  background-repeat: no-repeat;
+.feedback-form fieldset {
+  margin: 0;
+  padding: 0;
+  border:none;
+  font-size: 0;
 }
+
+.feedback-form legend {
+  margin-bottom: 18px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 22px;
+  color:#343434;
+}
+
+.feedback-form input[name="name"],
+.feedback-form input[name="e-mail"],
+.feedback-form textarea {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color:#656565;
+  outline: none;
+  border: none;
+  border: 1px solid #b2b2b2;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.feedback-form input[name="name"],
+.feedback-form input[name="e-mail"] {
+  width: 267px;
+  padding: 13px 15px;
+  padding-bottom: 11px;
+}
+
+.feedback-form textarea {
+  width: 428px;
+  border-image: none;
+  line-height: 24.3px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+}
+.wrapper-btn-feedback-form {
+  font-size: 0;
+  text-align: right;
+}
+
+.btn-feedback-form {
+  padding-left: 26.5px;
+  padding-right: 26.5px;
+  height: 43.8px;
+  line-height: 43.8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+  /**--------------------- modal-content-feedback for index.html-------------------**/

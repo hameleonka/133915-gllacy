@@ -4,17 +4,9 @@
     <meta charset="utf-8">
     <title>Gllacy Главная</title>
     <link href="css/style.css" rel="stylesheet">
-    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <style>
-      .feedback-form {display: none;}
-      /**.btn .feedback:hover .feedback-form {display: block;}/** не показывается почему-то
-
-      .search-form label,.login-form label,.mailing-form label, .feedback-form label
-                         {font-size: 0;
-                         display: block; }
-      .search-form input, .login-form input,.mailing-form input, .feedback-form input
-                        {font-size: 14px;
-                         width:100%;}**/
+      .modal-overlay {display:none;} .modal-content-feedback {display:none;}
     </style>
   </head>
   <body>
@@ -64,62 +56,66 @@
         </nav>
         <div class="user-block">
           <div class="user-search">
-            <a class="search-link" href="#">
-            </a>
-            <div class="user-search-form">
-              <form class="search-form" action="#" method="post" name="search-form">
-                <fieldset>
-                  <label><input type="text" name="search-item" value="" placeholder="Что ищем?">Что ищем?</label>
-                </fieldset>
-              </form>
+            <a class="user-search-link" href="#"></a>
+            <div class="wrapper-user-search-form">
+              <div class="user-search-form">
+                <form class="search-form" action="#" method="post" name="search-form">
+                  <fieldset>
+                    <label><input type="text" name="search-item" value="" placeholder="Что ищем?">Что ищем?</label>
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
           <div class="user-login">
             <a class="user-login-link" href="#">Вход</a>
-            <div class="user-login-form">
-              <form class="login-form" action="#" method="post" name="login-form">
-                <fieldset>
-                  <label><input type="email" name="e-mail" value="" placeholder="Электронная почта">Электронная почта</label>
-                  <label><input type="password" name="password" value="" placeholder="Пароль">Пароль</label>
-                  <div class="wrapper-button-links clearfix">
-                    <button class="btn btn-login-form" type="submit">Войти</button>
-                    <div class="user-login-links">
-                      <a href="#"><span>Забыли пароль?</span></a>
-                      <a href="#"><span>Новая регистрация</span></a>
+            <div class="wrapper-user-login-form">
+              <div class="user-login-form">
+                <form class="login-form" action="#" method="post" name="login-form">
+                  <fieldset>
+                    <label><input type="email" name="e-mail" value="" placeholder="Электронная почта">Электронная почта</label>
+                    <label><input type="password" name="password" value="" placeholder="Пароль">Пароль</label>
+                    <div class="wrapper-button-links clearfix">
+                      <button class="btn btn-login-form" type="submit">Войти</button>
+                      <div class="user-login-links">
+                        <a href="#"><span>Забыли пароль?</span></a>
+                        <a href="#"><span>Новая регистрация</span></a>
+                      </div>
                     </div>
-                  </div>
-                </fieldset>
-              </form>
-
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
           <div class="user-cart">
-            <a class="user-cart-link" href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span> </a>
-            <div class="user-cart-form">
+            <a class="user-cart-link" href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span></a>
+            <div class="wrapper-user-cart-form">
+              <div class="user-cart-form">
 
-                <table class="cart-form-table" cellpadding="0">
-                  <tr>
-                    <td class="cart-check"></td>
-                    <td class="cart-image"><img src="#" width="33px" height="33px" alt="icon-hit1"></td>
-                    <td class="cart-description">Пломбир с апельсиновым джемом</td>
-                    <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 200 руб.</span></td>
-                    <td class="cart-price-total">300 руб.</td>
-                  </tr>
-                  <tr class="accented">
-                    <td class="cart-check"></td>
-                    <td class="cart-image"><img src="#" width="33px" height="33px" alt="icon-hit3"></td>
-                    <td class="cart-description">Клубничный пломбир с присыпкой<br>
-                      из белого шоколада</td>
-                    <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 300 руб.</span></td>
-                    <td class="cart-price-total">450 руб.</td>
-                  </tr>
-                  <tr>
-                    <td class="cart-total" colspan="5">Итого: 750 руб.</td>
-                  </tr>
-                </table>
-                <div class="btn-cart-form">
-                  <a href="#" class="btn btn-order">Оформить заказ</a>
-                </div>
+                  <table class="cart-form-table" cellpadding="0">
+                    <tr>
+                      <td class="cart-check"></td>
+                      <td class="cart-image"></td>
+                      <td class="cart-description">Пломбир с апельсиновым джемом</td>
+                      <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 200 руб.</span></td>
+                      <td class="cart-price-total">300 руб.</td>
+                    </tr>
+                    <tr class="accented">
+                      <td class="cart-check"></td>
+                      <td class="cart-image"></td>
+                      <td class="cart-description">Клубничный пломбир с присыпкой<br>
+                        из белого шоколада</td>
+                      <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 300 руб.</span></td>
+                      <td class="cart-price-total">450 руб.</td>
+                    </tr>
+                    <tr>
+                      <td class="cart-total" colspan="5">Итого: 750 руб.</td>
+                    </tr>
+                  </table>
+                  <div class="btn-cart-form">
+                    <a href="#" class="btn btn-order">Оформить заказ</a>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -130,7 +126,7 @@
       </div>
     </header>
 
-    <main class="container-center">
+    <div class="container-center">
 
       <div class="slider">
         <div class="slide" id="slide1">
@@ -185,7 +181,7 @@
               ХИТ
             </div>
             <div class="hit-price">
-              310 <span class="hit-price-P"></span><span class="kg">/кг</span>
+              310<span class="hit-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -203,7 +199,7 @@
               ХИТ
             </div>
             <div class="hit-price">
-              380 <span class="hit-price-P"></span><span class="kg">/кг</span>
+              380<span class="hit-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -221,7 +217,7 @@
               ХИТ
             </div>
             <div class="hit-price">
-              355 <span class="hit-price-P"></span><span class="kg">/кг</span>
+              355<span class="hit-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -239,7 +235,7 @@
               ХИТ
             </div>
             <div class="hit-price">
-              415 <span class="hit-price-P"></span><span class="kg">/кг</span>
+              415<span class="hit-price-P"></span><span class="kg">/кг</span>
             </div>
           </div>
           <h3 class="hit-title">
@@ -256,7 +252,7 @@
           </div>
 
           <div class="seo-content1">
-            <div class="seo-icon"></div>
+            <span class="seo-icon"></span>
             <p class="seo-text">Все наше мороженое изготавливается на собственном
                 производстве, с использованием современного оборудования
                 и проверенных временем технологий.</p>
@@ -310,15 +306,17 @@
 
       </div>
 
-    </main>
+    </div>
 
     <section class="map">
 
       <div class="container-center">
 
         <div class="map-image">
-          <img src="img/map_with_pointer.jpg" width="1200" height="430" alt="map-image">
+         <div id="yandex-map" style="width: 1200px; height: 430px"></div>
         </div>
+
+
         <div class="map-contacts">
           <p class="map-contacts-part1">Адрес главного офиса и<br>
                 офлайн магазина:<br>
@@ -329,15 +327,6 @@
             (с 10 до 20 ежедневно)</p>
           <a class="btn" onclick="">Форма обратной связи</a>
         </div>
-        <form class="feedback-form" action="#" method="post">
-          <fieldset>
-            <legend>Мы обязательно вам ответим!</legend>
-            <label><input type="text" name="name" value="" placeholder="Как вас зовут?">Как вас зовут?</label>
-            <label><input type="text" name="e-mail" value="" placeholder="Ваша почта для ответа?">Ваша почта для ответа?</label>
-            <textarea rows="8" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea><br>
-          </fieldset>
-          <button class="btn" type="submit">Отправить</button>
-        </form>
 
       </div>
     </section>
@@ -369,5 +358,25 @@
       </div>
     </footer>
     </div>
+
+
+    <div class="modal-content-feedback">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+      <form class="feedback-form" action="#" method="post">
+        <fieldset>
+          <legend>Мы обязательно вам ответим!</legend>
+          <label><input type="text" name="name" value="" placeholder="Как вас зовут?">Как вас зовут?</label>
+          <label><input type="text" name="e-mail" value="" placeholder="Ваша почта для ответа?">Ваша почта для ответа?</label>
+          <label><textarea rows="5" placeholder="Напишите что-нибудь..."></textarea>Напишите что-нибудь...</label>
+        </fieldset>
+        <div class="wrapper-btn-feedback-form">
+          <button class="btn btn-feedback-form" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-overlay"></div>
+   <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=vmCuDunDATkqTsEzo4IDP1I_eZ8G4-LJ&width=1200&height=430&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
   </body>
 </html>

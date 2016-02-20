@@ -5,6 +5,7 @@
   <title>Gllacy Каталог</title>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   <style>
  /**
@@ -16,64 +17,6 @@
       font-size: 14px;
       width: 100%;
     }
-
-
-    .select {
-      display: inline-block;
-      width: 200px;
-      height: 30px;
-      line-height: 30px;
-      background: rgba(155,155,155,.6);
-      border-radius: 30px;
-      position: relative;
-    }
-    .select::after {
-      position: absolute;
-      content: "";
-      border-top: 8px solid #000;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom-width: 0;
-      right: 10px;
-      top: 13px;
-    }
-    .select input {
-      display: none;
-    }
-    #popular:checked ~ .select-text .select-text-1,
-    #cheap:checked ~ .select-text .select-text-2,
-    #expensive:checked ~ .select-text .select-text-3,
-    #fat:checked ~ .select-text .select-text-4 {
-      display: block;
-    }
-    #popular:checked ~ .select-drop [for="popular"],
-    #cheap:checked ~ .select-drop [for="cheap"],
-    #expensive:checked ~ .select-drop [for="expensive"],
-    #fat:checked ~ .select-drop [for="fat"] {
-      display: none;
-    }
-    .select-text div {
-      display: none;
-      padding: 0 20px;
-    }
-    .select-drop {
-      top: 100%;
-      width: 100%;
-      box-sizing: border-box;
-      position: absolute;
-      background: white;
-      display: none;
-    }
-    .select:hover .select-drop {
-      display: block;
-    }
-    .label-drop {
-      display: block;
-      line-height: 1.5;
-      padding: 3px 20px;
-    }
-    .label-drop:hover {
-      background: blue;
     }**/
 
   </style>
@@ -120,66 +63,70 @@
     </nav>
     <div class="user-block">
       <div class="user-search">
-        <a class="search-link" href="#">
-        </a>
-        <div class="user-search-form">
-          <form class="search-form" action="#" method="post" name="search-form">
-            <fieldset>
-              <label><input type="text" name="search-item" value="" placeholder="Что ищем?">Что ищем?</label>
-            </fieldset>
-          </form>
+        <a class="user-search-link" href="#"></a>
+        <div class="wrapper-user-search-form">
+          <div class="user-search-form">
+            <form class="search-form" action="#" method="post" name="search-form">
+              <fieldset>
+                <label><input type="text" name="search-item" value="" placeholder="Что ищем?">Что ищем?</label>
+              </fieldset>
+            </form>
+          </div>
         </div>
       </div>
       <div class="user-login">
         <a class="user-login-link" href="#">Вход</a>
-        <div class="user-login-form">
-          <form class="login-form" action="#" method="post" name="login-form">
-            <fieldset>
-              <label><input type="email" name="e-mail" value="" placeholder="Электронная почта">Электронная
-                почта</label>
-              <label><input type="password" name="password" value="" placeholder="Пароль">Пароль</label>
-              <div class="wrapper-button-links">
-                <button class="btn" type="submit">Войти</button>
-                <div class="user-login-links">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+        <div class="wrapper-user-login-form">
+          <div class="user-login-form">
+            <form class="login-form" action="#" method="post" name="login-form">
+              <fieldset>
+                <label><input type="email" name="e-mail" value="" placeholder="Электронная почта">Электронная почта</label>
+                <label><input type="password" name="password" value="" placeholder="Пароль">Пароль</label>
+                <div class="wrapper-button-links clearfix">
+                  <button class="btn btn-login-form" type="submit">Войти</button>
+                  <div class="user-login-links">
+                    <a href="#"><span>Забыли пароль?</span></a>
+                    <a href="#"><span>Новая регистрация</span></a>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-          </form>
-
+              </fieldset>
+            </form>
+          </div>
         </div>
       </div>
       <div class="user-cart">
-        <a class="user-cart-link" href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span> </a>
+        <a class="user-cart-link" href="#"><span class="cart-empty">Пусто</span><span class="cart-number-of-items">2 товара</span></a>
+        <div class="wrapper-user-cart-form">
+          <div class="user-cart-form">
 
-        <div class="user-cart-form">
-
-          <table class="cart-form-table">
-            <tr>
-              <td class="cart-check"><span class="cart-check-simbol"></span></td>
-              <td class="cart-image"><img src="#" width="" height="" alt="icon-hit1"></td>
-              <td class="cart-description">Пломбир с апельсиновым джемом</td>
-              <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 200 руб.</span></td>
-              <td class="cart-price-total">300 руб.</td>
-            </tr>
-            <tr>
-              <td class="cart-check"><span class="cart-check-simbol"></span></td>
-              <td class="cart-image"><img src="#" width="" height="" alt="icon-hit3"></td>
-              <td class="cart-description">Клубничный пломбир с присыпкой<br>
-                из белого шоколада
-              </td>
-              <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 300 руб.</span></td>
-              <td class="cart-price-total">450 руб.</td>
-            </tr>
-            <tr>
-              <td class="cart-total" colspan="4">Итого: 750 руб.</td>
-            </tr>
-          </table>
-          <a href="#" class="btn btn-order">Оформить заказ</a>
-
+            <table class="cart-form-table" cellpadding="0">
+              <tr>
+                <td class="cart-check"></td>
+                <td class="cart-image"></td>
+                <td class="cart-description">Пломбир с апельсиновым джемом</td>
+                <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 200 руб.</span></td>
+                <td class="cart-price-total">300 руб.</td>
+              </tr>
+              <tr class="accented">
+                <td class="cart-check"></td>
+                <td class="cart-image"></td>
+                <td class="cart-description">Клубничный пломбир с присыпкой<br>
+                  из белого шоколада</td>
+                <td class="cart-price-per-item">1,5 кг <span class="price-per-item">х 300 руб.</span></td>
+                <td class="cart-price-total">450 руб.</td>
+              </tr>
+              <tr>
+                <td class="cart-total" colspan="5">Итого: 750 руб.</td>
+              </tr>
+            </table>
+            <div class="btn-cart-form">
+              <a href="#" class="btn btn-order">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </div>
+
+
     </div>
     <div class="contact-info">
       <span class="contact-info-normal">С 10 до 20, ежедневно</span><br><span class="contact-info-bold">8 812 450-25-25</span>
@@ -188,7 +135,7 @@
   </div>
 </header>
 
-<main class="container-center">
+<div class="container-center">
 
   <div class="container-header">
     <div class="breadcrumbs">
@@ -281,7 +228,7 @@
             <a href="#"><img src="img/icecream_image1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
           </div>
           <div class="icecream-price">
-            310 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            310<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -291,7 +238,7 @@
           <a href="#">Сливочное с апельсиновым
             джемом и цитрусовой стружкой</a>
         </h3>
-      </article>
+       </article>
 
       <article class="icecream-option">
         <div class="icecream-image-block">
@@ -299,7 +246,7 @@
             <a href="#"><img src="img/icecream_image2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
           </div>
           <div class="icecream-price">
-            380 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            380<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -317,7 +264,7 @@
             <a href="#"><img src="img/icecream_image3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
           </div>
           <div class="icecream-price">
-            355 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            355<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -336,7 +283,7 @@
             <a href="#"><img src="img/icecream_image4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
           </div>
           <div class="icecream-price">
-            415 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            415<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -355,7 +302,7 @@
             <a href="#"><img src="img/icecream_image5.png" width="267" height="267" alt="Сливочное с брусничным джемом"></a>
           </div>
           <div class="icecream-price">
-            325 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            325<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -373,7 +320,7 @@
             <a href="#"><img src="img/icecream_image6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники"></a>
           </div>
           <div class="icecream-price">
-            410 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            410<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -392,7 +339,7 @@
             <a href="#"><img src="img/icecream_image7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой"></a>
           </div>
           <div class="icecream-price">
-            375 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            375<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -411,7 +358,7 @@
             <a href="#"><img src="img/icecream_image8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой"></a>
           </div>
           <div class="icecream-price">
-            320 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            320<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -429,7 +376,7 @@
             <a href="#"><img src="img/icecream_image9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада"></a>
           </div>
           <div class="icecream-price">
-            440 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            440<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -447,7 +394,7 @@
             <a href="#"><img src="img/icecream_image10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом"></a>
           </div>
           <div class="icecream-price">
-            435 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            435<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -465,7 +412,7 @@
             <a href="#"><img src="img/icecream_image11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада"></a>
           </div>
           <div class="icecream-price">
-            355 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            355<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -483,7 +430,7 @@
             <a href="#"><img src="img/icecream_image12.png" width="267" height="267" alt="Сливочное с мятным сиропом"></a>
           </div>
           <div class="icecream-price">
-            420 <span class="icecream-price-P"></span><span class="kg">/кг</span>
+            420<span class="icecream-price-P"></span><span class="kg">/кг</span>
           </div>
           <div class="icecream-quick-view">
             <a class="btn" href="#">Быстрый просмотр</a>
@@ -510,7 +457,7 @@
       </a>
     </div>
   </div>
-</main>
+</div>
 
 <footer class="main-footer">
   <div class="container-center clearfix">
