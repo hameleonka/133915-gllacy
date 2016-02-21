@@ -3,13 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Главная</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <style>
-      .modal-overlay {display:none;} .modal-content-feedback {display:none;}
     </style>
   </head>
   <body>
+
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <defs>
+      <g id="icon-search">
+        <path  d="M931.155,40.747H930.4l-0.264-.261a6.212,6.212,0,1,0-.675.675l0.263,0.262v0.755l4.773,4.76,1.423-1.422Zm-5.731,0a4.291,4.291,0,1,1,4.3-4.291A4.294,4.294,0,0,1,925.424,40.747Z" transform="translate(-919.219 -30.25)"/>
+      </g>
+      <g id="icon-login">
+        <path d="M973,32.968v-0.96a3,3,0,0,1,3-3h11.059a3,3,0,0,1,3,3V44.985a3,3,0,0,1-3,3H976a3,3,0,0,1-3-3V44h2v2h13V31H975v1.968h-2Zm-3,8.046h6.029v2.743l7.027-5.3-7.027-5.3V35.9H970v5.114Z" transform="translate(-970 -29)"/>
+      </g>
+      <g id="icon-twitter">
+        <path d="M46.427,2352.17a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,46.427,2352.17Zm9.138,10.81a7.331,7.331,0,0,1-2.092.57,3.663,3.663,0,0,0,1.6-2.02,7.4,7.4,0,0,1-2.313.89,3.645,3.645,0,0,0-6.207,3.32,10.316,10.316,0,0,1-7.507-3.81,3.655,3.655,0,0,0,1.127,4.87,3.68,3.68,0,0,1-1.65-.46c0,0.02,0,.03,0,0.05a3.651,3.651,0,0,0,2.922,3.57,3.789,3.789,0,0,1-.96.13,3.861,3.861,0,0,1-.685-0.07,3.643,3.643,0,0,0,3.4,2.53,7.29,7.29,0,0,1-4.524,1.56,8.291,8.291,0,0,1-.869-0.05,10.354,10.354,0,0,0,15.946-8.73c0-.16,0-0.31-0.011-0.47A7.33,7.33,0,0,0,55.565,2362.98Z" transform="translate(-30.75 -2352.16)"/>
+      </g>
+      <g id="icon-ist">
+        <path d="M95.865,2352.23a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,95.865,2352.23Zm6.271,23.61a1.745,1.745,0,0,0,1.745-1.75v-12.31a1.743,1.743,0,0,0-1.745-1.74H89.809a1.743,1.743,0,0,0-1.745,1.74v12.31a1.745,1.745,0,0,0,1.745,1.75h12.328Zm-1.375-9.1a4.921,4.921,0,1,1-9.529,0h-1.38v6.78a0.609,0.609,0,0,0,.611.61h11.065a0.609,0.609,0,0,0,.612-0.61v-6.78h-1.38ZM96,2365.13a2.848,2.848,0,1,1,0,5.68A2.84,2.84,0,0,1,96,2365.13Zm3.7-3.31h1.865a0.608,0.608,0,0,1,.611.61v1.86a0.608,0.608,0,0,1-.611.61H99.7a0.609,0.609,0,0,1-.611-0.61v-1.86A0.609,0.609,0,0,1,99.7,2361.82Z" transform="translate(-80.188 -2352.22)"/>
+      </g>
+      <g id="icon-fb">
+        <path d="M144.865,2352.23a15.69,15.69,0,1,1-15.692,15.69A15.687,15.687,0,0,1,144.865,2352.23Zm0.773,24.99v-9.29h2.743l0.285-3.09h-3.028l0-1.86c0-.89.085-1.26,1.367-1.26h1.764v-3.42h-2.792c-3.294,0-4.082,1.54-4.082,4.34v2.2h-1.889v3.09H141.9v9.29h3.738Z" transform="translate(-129.188 -2352.22)"/>
+      </g>
+      <g id="icon-vk">
+        <path d="M193.865,2352.23a15.69,15.69,0,1,1-15.692,15.69A15.687,15.687,0,0,1,193.865,2352.23Zm5.967,18.25a3.1,3.1,0,0,0-.757-2.2,3.7,3.7,0,0,0-2.016-1.09v-0.07a2.881,2.881,0,0,0,1.371-1.14,3.211,3.211,0,0,0,.5-1.77,3.133,3.133,0,0,0-.362-1.52,2.6,2.6,0,0,0-1.091-1.05,4.522,4.522,0,0,0-1.446-.48,17.993,17.993,0,0,0-2.269-.11h-4.8v13.59H194.4a8.909,8.909,0,0,0,2.332-.25,4.783,4.783,0,0,0,1.686-.86,3.684,3.684,0,0,0,1.032-1.27,3.909,3.909,0,0,0,.383-1.78h0Zm-4.372-5.59a1.517,1.517,0,0,0-.169-0.67,1,1,0,0,0-.527-0.5,2.111,2.111,0,0,0-.8-0.17c-0.308,0-.766-0.01-1.374-0.01h-0.237v2.88h0.43c0.583,0,.994-0.01,1.228-0.02a2.044,2.044,0,0,0,.727-0.19,1.129,1.129,0,0,0,.563-0.53,1.9,1.9,0,0,0,.157-0.79h0Zm0.856,5.53a1.673,1.673,0,0,0-.255-0.99,1.533,1.533,0,0,0-.767-0.54,2.658,2.658,0,0,0-.853-0.13c-0.362-.01-0.849-0.01-1.456-0.01h-0.63v3.4h0.184c0.888,0,1.5-.01,1.842-0.02a2.867,2.867,0,0,0,1.041-.24,1.381,1.381,0,0,0,.68-0.59A1.813,1.813,0,0,0,196.316,2370.42Z" transform="translate(-178.188 -2352.22)"/>
+      </g>
+    </defs>
+  </svg>
 
     <input type="radio" id="btn-1" name="toggle" checked>
     <input type="radio" id="btn-2" name="toggle">
@@ -21,7 +44,7 @@
 
         <nav class="main-navigation">
           <div class="logo">
-            <img src="img/logo_gllacyshop.svg" width="154px" height="64px" alt="logo-gllacy">
+            <img src="img/logo_gllacyshop.svg" width="154" height="64" alt="logo-gllacy">
           </div>
           <ul class="catalog-menu">
             <li class="catalog">
@@ -56,19 +79,27 @@
         </nav>
         <div class="user-block">
           <div class="user-search">
-            <a class="user-search-link" href="#"></a>
+            <a class="user-search-link" href="#">
+              <svg width="16.687" height="16.688" viewBox="0 0 16.687 16.688">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </a>
             <div class="wrapper-user-search-form">
               <div class="user-search-form">
                 <form class="search-form" action="#" method="post" name="search-form">
                   <fieldset>
-                    <label><input type="text" name="search-item" value="" placeholder="Что ищем?">Что ищем?</label>
+                    <label><input type="text" name="search-item" value="" placeholder="Что ищем?" required>Что ищем?</label>
                   </fieldset>
                 </form>
               </div>
             </div>
           </div>
           <div class="user-login">
-            <a class="user-login-link" href="#">Вход</a>
+            <a class="user-login-link" href="#">Вход
+              <svg width="21" height="19" viewBox="0 0 20.063 19">
+                <use xlink:href="#icon-login"></use>
+              </svg>
+            </a>
             <div class="wrapper-user-login-form">
               <div class="user-login-form">
                 <form class="login-form" action="#" method="post" name="login-form">
@@ -92,7 +123,7 @@
             <div class="wrapper-user-cart-form">
               <div class="user-cart-form">
 
-                  <table class="cart-form-table" cellpadding="0">
+                  <table class="cart-form-table">
                     <tr>
                       <td class="cart-check"></td>
                       <td class="cart-image"></td>
@@ -325,7 +356,7 @@
           <p class="map-contacts-part2">Для заказов по телефону:<br>
             <span class="map-contacts-text-bold">8 812 450-25-25</span><br>
             (с 10 до 20 ежедневно)</p>
-          <a class="btn" onclick="">Форма обратной связи</a>
+          <a class="btn btn-feedback">Форма обратной связи</a>
         </div>
 
       </div>
@@ -335,10 +366,26 @@
       <div class="container-center clearfix">
 
         <section class="footer-social">
-          <a class="social-btn social-btn-tw" href="#">Твиттер</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+          <a class="social-btn social-btn-tw" href="#">Твиттер
+            <svg width="31" height="31" viewBox="0 0 31.375 31.4">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+          <a class="social-btn social-btn-inst" href="#">Инстаграм
+            <svg width="31" height="31" viewBox="0 0 31.376 31.41">
+              <use xlink:href="#icon-ist"></use>
+            </svg>
+          </a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук
+            <svg width="31" height="31" viewBox="0 0 31.375 31.41">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="social-btn social-btn-vk" href="#">Вконтакте
+            <svg width="31" height="31" viewBox="0 0 31.375 31.41">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a>
         </section>
         <section class="footer-about-us">
           <div class="about-us-column1">
@@ -366,9 +413,9 @@
       <form class="feedback-form" action="#" method="post">
         <fieldset>
           <legend>Мы обязательно вам ответим!</legend>
-          <label><input type="text" name="name" value="" placeholder="Как вас зовут?">Как вас зовут?</label>
-          <label><input type="text" name="e-mail" value="" placeholder="Ваша почта для ответа?">Ваша почта для ответа?</label>
-          <label><textarea rows="5" placeholder="Напишите что-нибудь..."></textarea>Напишите что-нибудь...</label>
+          <label><input type="text" name="name" value="" placeholder="Как вас зовут?" required>Как вас зовут?</label>
+          <label><input type="text" name="e-mail" value="" placeholder="Ваша почта для ответа?" required>Ваша почта для ответа?</label>
+          <label><textarea rows="5" placeholder="Напишите что-нибудь..." required></textarea>Напишите что-нибудь...</label>
         </fieldset>
         <div class="wrapper-btn-feedback-form">
           <button class="btn btn-feedback-form" type="submit">Отправить</button>
@@ -378,5 +425,80 @@
 
     <div class="modal-overlay"></div>
    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=vmCuDunDATkqTsEzo4IDP1I_eZ8G4-LJ&width=1200&height=430&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
+
+  <script>
+
+    var btnFeedback = document.querySelector(".btn-feedback");
+    var popupFeedback = document.querySelector(".modal-content-feedback");
+    var closeFeedback = popupFeedback.querySelector(".modal-content-close");
+    var modalOverlay = document.querySelector(".modal-overlay");
+    var nameFeedback = popupFeedback.querySelector("[name=name]");
+    var userSearch = document.querySelector(".user-search");
+    var searchItem = userSearch.querySelector("[name=search-item]");
+    var userLogin = document.querySelector(".user-login");
+    var userLoginForm = document.querySelector(".user-login-form");
+    var emailLoginForm = userLoginForm.querySelector("[name=e-mail]");
+    var passwordLoginForm = userLoginForm.querySelector("[name=password]");
+    var storageEmail = localStorage.getItem("email");
+
+
+    btnFeedback.addEventListener("click", function(event) {
+      event.preventDefault();
+      popupFeedback.classList.add("modal-content-feedback-show");
+      modalOverlay.classList.add("modal-overlay-show");
+      nameFeedback.focus();
+    });
+
+    closeFeedback.addEventListener("click", function(event) {
+      event.preventDefault();
+      popupFeedback.classList.remove("modal-content-feedback-show");
+      modalOverlay.classList.remove("modal-overlay-show");
+    });
+
+    window.addEventListener("keydown", function(event) {
+      if (event.keyCode === 27) {
+        if (popupFeedback.classList.contains("modal-content-feedback-show")) {
+          popupFeedback.classList.remove("modal-content-feedback-show");
+          modalOverlay.classList.remove("modal-overlay-show");
+        }
+      }
+    });
+
+    modalOverlay.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (popupFeedback.classList.contains("modal-content-feedback-show")) {
+        popupFeedback.classList.remove("modal-content-feedback-show");
+        modalOverlay.classList.remove("modal-overlay-show");
+      }
+    });
+
+    userSearch.addEventListener("mouseenter", function(event) {
+        searchItem.focus();
+    });
+
+    userLogin.addEventListener("mouseenter", function(event) {
+      if (storageEmail) {
+        emailLoginForm.value = storageEmail;
+        passwordLoginForm.focus();}
+      else {
+        emailLoginForm.focus();
+      }
+    });
+
+    userLoginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+    });
+
+    userLoginForm.addEventListener("submit", function(event) {
+      if (!emailLoginForm || !passwordLoginForm) {
+        event.preventDefault();
+        console.log("Нужно ввести e-mail и пароль");}
+      else {
+        localStorage.setItem("email", emailLoginForm.value);
+      }
+    });
+
+  </script>
+
   </body>
 </html>
