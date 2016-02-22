@@ -5,7 +5,7 @@
     <title>Gllacy Главная</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&;subset=latin,cyrillic' rel='stylesheet'">
     <style>
     </style>
   </head>
@@ -48,14 +48,14 @@
           </div>
           <ul class="catalog-menu">
             <li class="catalog">
-              <a href="catalog.html"><span>Каталог</span></a>
+              <a href="#"><span>Каталог</span></a>
               <div class="wrapper-catalog-submenu">
                 <ul class="catalog-submenu">
                   <li class="catalog-new">
                     <a href="#">Новинки</a>
                   </li>
                   <li>
-                    <a href="gllacy-catalog.html">Сливочное</a>
+                    <a href="catalog.html">Сливочное</a>
                   </li>
                   <li>
                     <a href="#">Щербеты</a>
@@ -216,8 +216,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#">Сливочное с апельсиновым
-                        джемом и цитрусовой стружкой</a>
+            <a href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
           </h3>
         </article>
 
@@ -234,8 +233,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#">Сливочно-кофейное с кусочками
-                        шоколада</a>
+            <a href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a>
           </h3>
         </article>
 
@@ -252,8 +250,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#">Сливочно-клубничное
-                        присыпкой из белого шоколада</a>
+            <a href="#"><span>Сливочно-клубничное присыпкой из белого шоколада</span></a>
           </h3>
         </article>
 
@@ -270,8 +267,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#">Сливочное крем-брюле
-                        карамельной подливкой</a>
+            <a href="#"><span>Сливочное крем-брюле карамельной подливкой</span></a>
           </h3>
         </article>
 
@@ -367,7 +363,7 @@
 
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твиттер
-            <svg width="31" height="31" viewBox="0 0 31.375 31.4">
+            <svg width="31" height="31" viewBox="0 0 31.375 31.41">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
@@ -413,8 +409,11 @@
       <form class="feedback-form" action="#" method="post">
         <fieldset>
           <legend>Мы обязательно вам ответим!</legend>
+          <span class="hint-for-name">Как вас зовут?</span>
           <label><input type="text" name="name" value="" placeholder="Как вас зовут?" required>Как вас зовут?</label>
+          <span class="hint-for-email">Ваша почта для ответа?</span>
           <label><input type="text" name="e-mail" value="" placeholder="Ваша почта для ответа?" required>Ваша почта для ответа?</label>
+          <span class="hint-for-text">Напишите что-нибудь...</span>
           <label><textarea rows="5" placeholder="Напишите что-нибудь..." required></textarea>Напишите что-нибудь...</label>
         </fieldset>
         <div class="wrapper-btn-feedback-form">
@@ -433,6 +432,15 @@
     var closeFeedback = popupFeedback.querySelector(".modal-content-close");
     var modalOverlay = document.querySelector(".modal-overlay");
     var nameFeedback = popupFeedback.querySelector("[name=name]");
+    var emailFeedback = popupFeedback.querySelector("[name=e-mail]");
+    var textFeedback = popupFeedback.querySelector("textarea");
+    var hintForName = popupFeedback.querySelector(".hint-for-name");
+    var hintForEmail = popupFeedback.querySelector(".hint-for-email");
+    var hintForText = popupFeedback.querySelector(".hint-for-text");
+
+
+
+
     var userSearch = document.querySelector(".user-search");
     var searchItem = userSearch.querySelector("[name=search-item]");
     var userLogin = document.querySelector(".user-login");
@@ -471,6 +479,82 @@
         modalOverlay.classList.remove("modal-overlay-show");
       }
     });
+
+    nameFeedback.addEventListener("focus", function(event) {
+      event.preventDefault();
+     if (nameFeedback.value) {
+        hintForName.classList.remove("hint-for-name-show-grey");
+        hintForName.classList.add("hint-for-name-show-blue");
+        }
+      else {
+        nameFeedback.removeAttribute('placeholder');
+        hintForName.classList.add("hint-for-name-show-blue");
+      }
+    });
+
+    nameFeedback.addEventListener("blur", function(event) {
+      event.preventDefault();
+      if (nameFeedback.value) {
+        hintForName.classList.add("hint-for-name-show-grey");
+        nameFeedback.classList.add('name-active');
+      } else {
+      nameFeedback.setAttribute('placeholder', 'Как вас зовут');
+      hintForName.classList.remove("hint-for-name-show-blue");
+        nameFeedback.classList.remove('name-active');
+    }
+    });
+
+
+
+    emailFeedback.addEventListener("focus", function(event) {
+      event.preventDefault();
+      if (emailFeedback.value) {
+        hintForEmail.classList.remove("hint-for-email-show-grey");
+        hintForEmail.classList.add("hint-for-emaile-show-blue");
+      }
+      else {
+        emailFeedback.removeAttribute('placeholder');
+        hintForEmail.classList.add("hint-for-email-show-blue");
+      }
+    });
+
+    emailFeedback.addEventListener("blur", function(event) {
+      event.preventDefault();
+      if (emailFeedback.value) {
+        hintForEmail.classList.add("hint-for-email-show-grey");
+        emailFeedback.classList.add('email-active');
+      } else {
+        emailFeedback.setAttribute('placeholder', 'Ваша почта для ответа?');
+        hintForEmail.classList.remove("hint-for-email-show-blue");
+        emailFeedback.classList.remove('email-active');
+      }
+    });
+
+
+    textFeedback.addEventListener("focus", function(event) {
+      event.preventDefault();
+      if (textFeedback.value) {
+        hintForText.classList.remove("hint-for-text-show-grey");
+        hintForText.classList.add("hint-for-text-show-blue");
+      }
+      else {
+        textFeedback.removeAttribute('placeholder');
+        hintForText.classList.add("hint-for-text-show-blue");
+      }
+    });
+
+    textFeedback.addEventListener("blur", function(event) {
+      event.preventDefault();
+      if (textFeedback.value) {
+        hintForText.classList.add("hint-for-text-show-grey");
+        textFeedback.classList.add('text-active');
+      } else {
+        textFeedback.setAttribute('placeholder', 'Напишите что-нибудь...?');
+        hintForText.classList.remove("hint-for-text-show-blue");
+        textFeedback.classList.remove('text-active');
+      }
+    });
+
 
     userSearch.addEventListener("mouseenter", function(event) {
         searchItem.focus();
