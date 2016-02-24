@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Gllacy Главная</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&;subset=latin,cyrillic' rel='stylesheet'">
     <style>
     </style>
@@ -73,7 +73,7 @@
               <a href="#"><span>Доставка и оплата</span></a>
             </li>
             <li>
-              <a href="#"><span>О компании</span></a>
+              <a href="#"><span>О Компании</span></a>
             </li>
           </ul>
         </nav>
@@ -161,15 +161,15 @@
 
       <div class="slider">
         <div class="slide" id="slide1">
-            <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+            <div class="slide-title">Крем-брюле и пломбир<br>с малиновым джемом</div>
             <a class="btn btn-slider" href="#">Давайте оба!</a>
           </div>
         <div class="slide" id="slide2">
-            <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+            <div class="slide-title">Шоколадный пломбир<br>и лимонный сорбет</div>
             <a class="btn btn-slider" href="#">Давайте оба!</a>
           </div>
         <div class="slide" id="slide3">
-            <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+            <div class="slide-title">Пломбир с помадкой<br>и клубничный щербет</div>
             <a class="btn btn-slider" href="#">Давайте оба!</a>
           </div>
         <div class="slider-controls">
@@ -216,7 +216,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+            <a href="#"><span>Сливочное с апельсиновым<br>джемом и цитрусовой стружкой</span></a>
           </h3>
         </article>
 
@@ -233,7 +233,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a>
+            <a href="#"><span>Сливочно-кофейное с кусочками<br>шоколада</span></a>
           </h3>
         </article>
 
@@ -250,7 +250,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#"><span>Сливочно-клубничное присыпкой из белого шоколада</span></a>
+            <a href="#"><span>Сливочно-клубничное c<br>присыпкой из белого шоколада</span></a>
           </h3>
         </article>
 
@@ -267,7 +267,7 @@
             </div>
           </div>
           <h3 class="hit-title">
-            <a href="#"><span>Сливочное крем-брюле карамельной подливкой</span></a>
+            <a href="#"><span>Сливочное крем-брюле c<br>карамельной подливкой</span></a>
           </h3>
         </article>
 
@@ -302,7 +302,7 @@
 
           <div class="seo-content4">
             <div class="seo-icon"></div>
-            <p class="seo-text">Доставка нашего мороженого до заказчиков осуществляется
+            <p class="seo-text">Доставка нашего мороженого до заказчиков осуществляется<br>
                 в специальном термопаке, которая не дает мороженому
                 растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
           </div>
@@ -314,7 +314,7 @@
           <span>Новое в нашем блоге</span>
           <h3 class="main-news">
             <a href="#"> 10 способов сервировки
-              фруктовых щербетов
+              фруктовых щербетов<br>
               к столу</a>
           </h3>
         </section>
@@ -340,7 +340,7 @@
       <div class="container-center">
 
         <div class="map-image">
-         <div id="yandex-map" style="width: 1200px; height: 430px"></div>
+         <div id="yandex-map"></div>
         </div>
 
 
@@ -352,7 +352,7 @@
           <p class="map-contacts-part2">Для заказов по телефону:<br>
             <span class="map-contacts-text-bold">8 812 450-25-25</span><br>
             (с 10 до 20 ежедневно)</p>
-          <a class="btn btn-feedback">Форма обратной связи</a>
+          <a href="#" class="btn btn-feedback">Форма обратной связи</a>
         </div>
 
       </div>
@@ -424,165 +424,7 @@
 
     <div class="modal-overlay"></div>
    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=vmCuDunDATkqTsEzo4IDP1I_eZ8G4-LJ&width=1200&height=430&lang=ru_RU&sourceType=constructor&id=yandex-map"></script>
-
-  <script>
-
-    var btnFeedback = document.querySelector(".btn-feedback");
-    var popupFeedback = document.querySelector(".modal-content-feedback");
-    var closeFeedback = popupFeedback.querySelector(".modal-content-close");
-    var modalOverlay = document.querySelector(".modal-overlay");
-    var nameFeedback = popupFeedback.querySelector("[name=name]");
-    var emailFeedback = popupFeedback.querySelector("[name=e-mail]");
-    var textFeedback = popupFeedback.querySelector("textarea");
-    var hintForName = popupFeedback.querySelector(".hint-for-name");
-    var hintForEmail = popupFeedback.querySelector(".hint-for-email");
-    var hintForText = popupFeedback.querySelector(".hint-for-text");
-
-
-
-
-    var userSearch = document.querySelector(".user-search");
-    var searchItem = userSearch.querySelector("[name=search-item]");
-    var userLogin = document.querySelector(".user-login");
-    var userLoginForm = document.querySelector(".user-login-form");
-    var emailLoginForm = userLoginForm.querySelector("[name=e-mail]");
-    var passwordLoginForm = userLoginForm.querySelector("[name=password]");
-    var storageEmail = localStorage.getItem("email");
-
-
-    btnFeedback.addEventListener("click", function(event) {
-      event.preventDefault();
-      popupFeedback.classList.add("modal-content-feedback-show");
-      modalOverlay.classList.add("modal-overlay-show");
-      nameFeedback.focus();
-    });
-
-    closeFeedback.addEventListener("click", function(event) {
-      event.preventDefault();
-      popupFeedback.classList.remove("modal-content-feedback-show");
-      modalOverlay.classList.remove("modal-overlay-show");
-    });
-
-    window.addEventListener("keydown", function(event) {
-      if (event.keyCode === 27) {
-        if (popupFeedback.classList.contains("modal-content-feedback-show")) {
-          popupFeedback.classList.remove("modal-content-feedback-show");
-          modalOverlay.classList.remove("modal-overlay-show");
-        }
-      }
-    });
-
-    modalOverlay.addEventListener("click", function(event) {
-      event.preventDefault();
-      if (popupFeedback.classList.contains("modal-content-feedback-show")) {
-        popupFeedback.classList.remove("modal-content-feedback-show");
-        modalOverlay.classList.remove("modal-overlay-show");
-      }
-    });
-
-    nameFeedback.addEventListener("focus", function(event) {
-      event.preventDefault();
-     if (nameFeedback.value) {
-        hintForName.classList.remove("hint-for-name-show-grey");
-        hintForName.classList.add("hint-for-name-show-blue");
-        }
-      else {
-        nameFeedback.removeAttribute('placeholder');
-        hintForName.classList.add("hint-for-name-show-blue");
-      }
-    });
-
-    nameFeedback.addEventListener("blur", function(event) {
-      event.preventDefault();
-      if (nameFeedback.value) {
-        hintForName.classList.add("hint-for-name-show-grey");
-        nameFeedback.classList.add('name-active');
-      } else {
-      nameFeedback.setAttribute('placeholder', 'Как вас зовут');
-      hintForName.classList.remove("hint-for-name-show-blue");
-        nameFeedback.classList.remove('name-active');
-    }
-    });
-
-
-
-    emailFeedback.addEventListener("focus", function(event) {
-      event.preventDefault();
-      if (emailFeedback.value) {
-        hintForEmail.classList.remove("hint-for-email-show-grey");
-        hintForEmail.classList.add("hint-for-emaile-show-blue");
-      }
-      else {
-        emailFeedback.removeAttribute('placeholder');
-        hintForEmail.classList.add("hint-for-email-show-blue");
-      }
-    });
-
-    emailFeedback.addEventListener("blur", function(event) {
-      event.preventDefault();
-      if (emailFeedback.value) {
-        hintForEmail.classList.add("hint-for-email-show-grey");
-        emailFeedback.classList.add('email-active');
-      } else {
-        emailFeedback.setAttribute('placeholder', 'Ваша почта для ответа?');
-        hintForEmail.classList.remove("hint-for-email-show-blue");
-        emailFeedback.classList.remove('email-active');
-      }
-    });
-
-
-    textFeedback.addEventListener("focus", function(event) {
-      event.preventDefault();
-      if (textFeedback.value) {
-        hintForText.classList.remove("hint-for-text-show-grey");
-        hintForText.classList.add("hint-for-text-show-blue");
-      }
-      else {
-        textFeedback.removeAttribute('placeholder');
-        hintForText.classList.add("hint-for-text-show-blue");
-      }
-    });
-
-    textFeedback.addEventListener("blur", function(event) {
-      event.preventDefault();
-      if (textFeedback.value) {
-        hintForText.classList.add("hint-for-text-show-grey");
-        textFeedback.classList.add('text-active');
-      } else {
-        textFeedback.setAttribute('placeholder', 'Напишите что-нибудь...?');
-        hintForText.classList.remove("hint-for-text-show-blue");
-        textFeedback.classList.remove('text-active');
-      }
-    });
-
-
-    userSearch.addEventListener("mouseenter", function(event) {
-        searchItem.focus();
-    });
-
-    userLogin.addEventListener("mouseenter", function(event) {
-      if (storageEmail) {
-        emailLoginForm.value = storageEmail;
-        passwordLoginForm.focus();}
-      else {
-        emailLoginForm.focus();
-      }
-    });
-
-    userLoginForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-    });
-
-    userLoginForm.addEventListener("submit", function(event) {
-      if (!emailLoginForm || !passwordLoginForm) {
-        event.preventDefault();
-        console.log("Нужно ввести e-mail и пароль");}
-      else {
-        localStorage.setItem("email", emailLoginForm.value);
-      }
-    });
-
-  </script>
+   <script type="text/javascript" charset="utf-8" src="js/script.index.min.js"></script>
 
   </body>
 </html>

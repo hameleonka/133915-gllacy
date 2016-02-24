@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 22px;
@@ -62,7 +62,9 @@ button {
 .hit-title a:active,
 .icecream-title a:active,
 .breadcrumbs a:hover,
-.breadcrumbs a:active {
+.breadcrumbs a:active,
+.user-login-links a:hover,
+.user-login-links a:active {
   color:#ffbc9e;
 }
 
@@ -71,7 +73,9 @@ button {
 .hit-title a:active span,
 .icecream-title a:active span,
 .breadcrumbs a:hover span,
-.breadcrumbs a:active span {
+.breadcrumbs a:active span,
+.user-login-links a:hover span,
+.user-login-links a:active span {
   border-bottom: 1px solid #ffbc9e;
 }
 
@@ -150,7 +154,7 @@ header .container-center {
 }
 
 .catalog-menu span {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .catalog-menu > li:hover a {
@@ -407,7 +411,7 @@ header .container-center {
   padding-left: 10px;
   border: 1px solid #d3d3d2;
   border-radius: 3px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 24.3px;
@@ -446,7 +450,7 @@ header .container-center {
   padding-left: 14px;
   border: 1px solid #d3d3d2;
   border-radius: 3px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 24.3px;
@@ -468,7 +472,7 @@ header .container-center {
   float:left;
   padding: 9px 30px;
   border-radius: 35px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
   -webkit-box-sizing: border-box;
@@ -487,7 +491,7 @@ header .container-center {
   padding: 0;
   margin: 0;
   padding-bottom: 10px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   color: #333333;
@@ -520,7 +524,7 @@ header .container-center {
   vertical-align: baseline;
   border-collapse: collapse;
   line-height: 16px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   color: #333333;
@@ -595,7 +599,7 @@ header .container-center {
   padding-right: 22px;
   height: 35px;
   line-height: 35px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
   color: #fefefe;
@@ -612,7 +616,7 @@ header .container-center {
 
 .main-header .contact-info {
   position: absolute;
-  top: 70.87px;
+  top: 72px;
   right: 27px;
   width: 322.61px;
   color: #ffffff;
@@ -629,13 +633,13 @@ header .container-center {
 .contact-info-bold {
   font-size: 22px;
   font-weight: 600;
-  line-height: 28.35px;
+  line-height: 20px;
 }
 
 /**--------------------- slider-index.html only-------------------**/
 .slider {
   position: relative;
-  margin-bottom: 40.67px;
+  margin-bottom: 41px;
   padding-top: 339.50px;
   text-align: center;
 }
@@ -645,9 +649,8 @@ header .container-center {
 }
 
 .slide-title {
-  width: 700px;
   margin: 0 auto;
-  margin-bottom: 19.77px;
+  margin-bottom: 28px;
   color: #ffffff;
   font-size: 60px;
   font-weight: 900;
@@ -655,11 +658,14 @@ header .container-center {
 }
 
 .btn-slider {
-  padding: 14.33px 38.80px;
+  padding-top: 13px;
+  padding-bottom: 14.10px;
+  padding-left:43px;
+  padding-right: 43px;
   text-align: center;
   font-size: 31.48px;
   font-weight: bold;
-  line-height: 41px;
+  line-height: 35.74px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 62px;
 }
@@ -680,7 +686,7 @@ header .container-center {
 
 .slider-controls {
   position: absolute;
-  bottom: 22.55px;
+  bottom: 21px;
   left: 0;
   z-index: 20;
   font-size: 0;
@@ -732,7 +738,7 @@ header .container-center {
 
 /**--------------------- special offers-index.html only-------------------**/
 .special-offers {
-  margin-bottom: 40.25px;
+  margin-bottom: 39px;
   color: #ffffff;
 }
 
@@ -749,7 +755,7 @@ header .container-center {
 
 h2.special-offer-header {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 16.5px;
   font-size: 35px;
   font-weight: bold;
   line-height: 38.61px;
@@ -758,7 +764,7 @@ h2.special-offer-header {
 .special-offers p {
   margin-top: 0;
   margin-bottom: 27.29px;
-  min-height: 58.78px;
+  min-height: 61px;
   font-size: 18px;
   font-weight: bold;
   line-height: 22px;
@@ -777,21 +783,22 @@ h2.special-offer-header {
 }
 
 .btn-special-offer {
-  margin-bottom: 22.89px;
+  margin-bottom: 24px;
   text-align: right;
   font-size: 18px;
   font-weight: bold;
 }
 
 .btn-special-offer a {
-  padding: 12.99px 21.86px;
+  padding: 12.99px 24px;
   border-radius: 46px;
 }
 /**--------------------- special offers-index.html only-------------------**/
 
 /**--------------------- catalog container-header-catalog.html only-------------------**/
 .container-header {
-  padding-top: 44.05px;
+  padding-top: 40px;
+  margin-bottom:34px;
   font-size: 0;
 }
 
@@ -804,7 +811,7 @@ h2.special-offer-header {
 .breadcrumbs-current-page {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 3.5px;
+  margin-right: 3px;
   text-decoration: none;
   font-size: 14px;
   font-weight: normal;
@@ -818,7 +825,7 @@ h2.special-offer-header {
 .breadcrumbs i {
   display: inline-block;
   vertical-align: bottom;
-  margin-right: 3.5px;
+  margin-right: 3px;
   line-height:15.62px;
   font-size: 14px;
   font-weight: normal;
@@ -826,6 +833,7 @@ h2.special-offer-header {
 }
 
 h1.container-header-header {
+  margin-top: 0;
   font-size: 35px;
   font-weight: bold;
   color: #ffffff;
@@ -834,9 +842,7 @@ h1.container-header-header {
 /**--------------------- catalog container-header-catalog.html only-------------------**/
 
 /**--------------------- catalog container-content-catalog.html only-------------------**/
-.container-content {
 
-}
 /**--------------------- FORM filter-icecream-catalog.html only-------------------**/
 .container-content .filter-icecream{
   margin-bottom: 39.8px;
@@ -858,7 +864,7 @@ width:870px;
   margin-bottom: 18px;
   border: none;
   outline: none;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #ffffff;
@@ -867,7 +873,7 @@ width:870px;
 .filter-icecream-sorting legend {
   padding: 0;
   margin: 0;
-  margin-left: 15px;
+  padding-left: 15px;
   line-height: 15.78px;
   margin-bottom:6px;
 }
@@ -915,7 +921,7 @@ width:870px;
 
 .select-text div {
   display: none;
-  padding: 0 20px;
+  padding: 0 15px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -927,7 +933,7 @@ width:870px;
   top: 37px;
   width: 100%;
   background: #FFFFFF;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   color: #343434;
@@ -971,7 +977,7 @@ width:870px;
   width: 218.5px;
   margin-right: 15.19px;
   margin-bottom: 18px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #ffffff;
@@ -1052,11 +1058,11 @@ width:870px;
 }
 
 .range-toggle-min {
-  left: 45px;
+  left: 32px;
 }
 
 .range-toggle-max {
-  left: 142px;
+  left: 130px;
 }
 
 /**--------------------- FORM filter-icecream-price-catalog.html only-------------------**/
@@ -1070,7 +1076,7 @@ width:870px;
   margin-right: 15.2px;
   margin-bottom: 18px;
   border: none;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 500;
   color: #ffffff;
 }
@@ -1161,7 +1167,7 @@ width:870px;
   margin: 0;
   margin-right: 13.4px;
   border: none;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 500;
   color: #ffffff;
 }
@@ -1254,7 +1260,7 @@ width:870px;
   padding-left:30px;
   padding-right:30px;
   height: 36px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
@@ -1281,9 +1287,6 @@ width:870px;
 }
 /**--------------------- FORM filter-icecream-catalog.html only-------------------**/
 
-
-
-
 /**--------------------- list-of-icecreams, hit-list-common for index.html, catalog.html-------------------**/
 .hit-list {
   font-size: 0;
@@ -1299,7 +1302,7 @@ width:870px;
   vertical-align: top;
   max-width: 267px;
   margin-right: 26px;
-  margin-bottom: 39.83px;
+  margin-bottom: 38px;
   text-align: center;
 }
 
@@ -1312,7 +1315,12 @@ width:870px;
   position: relative;
   width: 267px;
   height: 267px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
+}
+
+.hit-image-block img, .icecream-image-block img {
+  width: 267px;
+  height: 267px;
 }
 
 .hit-icon {
@@ -1334,7 +1342,7 @@ width:870px;
 
 .hit-price, .icecream-price {
   position: absolute;
-  top: 208.5px;
+  top: 205px;
   left: 0;
   z-index: 2;
   vertical-align: bottom;
@@ -1360,7 +1368,7 @@ width:870px;
   content: "";
   position: absolute;
   top: 9.36px;
-  left: 82px;
+  left: 80px;
   width: 31px;
   height: 36px;
   z-index: 3;
@@ -1371,6 +1379,10 @@ width:870px;
 .hit-title a, .icecream-title a {
   display: block;
   position: relative;
+  max-height:44px;
+  overflow: hidden;
+  /*text-overflow: ellipsis;*/
+  /*white-space: nowrap;*/
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
@@ -1400,6 +1412,7 @@ width:870px;
 .icecream-quick-view a {
   display: inline-block;
   vertical-align: top;
+
   margin: 0 auto;
   margin-top: 348px;
   padding: 9px 26px;
@@ -1431,7 +1444,7 @@ width:870px;
 /**--------------------- pagination-catalog.html only-------------------**/
 .pagination {
   float:right;
-  margin-bottom: 39px;
+  margin-bottom: 25px;
   vertical-align: middle;
   font-size: 0;
   line-height: 26px;
@@ -1442,7 +1455,7 @@ width:870px;
   vertical-align: middle;
   width:26px;
   height:26px;
-  margin-right: 3.5px;
+  margin-right: 2px;
   line-height: 26px;
   text-align: center;
   text-decoration: none;
@@ -1486,9 +1499,9 @@ a.prev, a.next {
 .seo {
   max-width: 1146px;
   margin-bottom: 40px;
-  padding-top: 27.17px;
+  padding-top: 24px;
   padding-left: 20.81px;
-  padding-bottom: 13.8px;
+  padding-bottom: 14px;
   padding-right: 15.18px;
   background: #ede0c6 url("../img/seo-pattern.jpg") repeat;
   color: #353535;
@@ -1501,7 +1514,7 @@ a.prev, a.next {
 
 .seo-header {
   margin: 0;
-  margin-bottom: 9.81px;
+  margin-bottom: 11px;
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
@@ -1523,9 +1536,9 @@ a.prev, a.next {
   position: relative;
   padding: 0;
   margin: 0;
-  margin-bottom: 11.15px;
+  margin-bottom: 11px;
   padding-left: 55.84px;
-  padding-top: 14.69px;
+  padding-top: 11px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1533,7 +1546,7 @@ a.prev, a.next {
 
 .seo-content1, .seo-content3 {
   max-width: 535.79px;
-  margin-right: 25.75px;
+  margin-right: 29px;
 }
 
 .seo-content2, .seo-content4 {
@@ -1594,10 +1607,12 @@ a.prev, a.next {
   float: left;
   max-width: 560px;
   min-height: 220px;
-  padding-top: 25.71px;
-  padding-left: 20.81px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 20px;
   padding-right: 254.98px;
   background: #ffffff url("../img/blog_news_bd.png") no-repeat;
+  background-size: cover;
   border-radius: 12px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1606,7 +1621,6 @@ a.prev, a.next {
 
 .blog-news span {
   margin: 0;
-  margin-bottom: 8px;
   color: #353535;
   font-size: 16px;
   font-weight: 500;
@@ -1614,6 +1628,7 @@ a.prev, a.next {
 
 .main-news {
   margin: 0;
+  margin-top: 5px;
   color: #353535;
   font-size: 24px;
   font-weight: bold;
@@ -1630,11 +1645,12 @@ a.prev, a.next {
 .mailing {
   float: right;
   max-width: 560px;
-  min-height: 220px;
-  padding-top: 36.86px;
+  min-height: 85px;
+  padding-top: 33.5px;
   padding-left: 26.19px;
   padding-right: 23px;
   background:#f8f7f4 url("../img/mailing_form_bd.png") no-repeat;
+  background-size:cover;
   border-radius: 12px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1643,7 +1659,8 @@ a.prev, a.next {
 
 .mailing p {
   margin: 0;
-  margin-bottom: 37.29px;
+  margin-bottom: 20px;
+  min-height: 82px;
   line-height: 22px;
   font-size: 16px;
   font-weight: normal;
@@ -1654,6 +1671,7 @@ a.prev, a.next {
   font-size: 0;
   padding: 0;
   margin: 0;
+  margin-bottom:40px;
   border: none;
 }
 
@@ -1671,12 +1689,12 @@ a.prev, a.next {
   width: 367px;
   margin: 0;
   padding: 0;
-  padding-left: 10px;
+  padding-left: 9px;
   height: 44px;
   line-height: 24.3px;
   border-radius: 3px;
   border: 1px solid #b2b2b2;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   color: #999999;
@@ -1695,8 +1713,8 @@ a.prev, a.next {
 .mailing-form .btn-mailing-form {
   display: inline-block;
   vertical-align: top;
-  padding: 12px 20px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  padding: 10px 20px;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 17px;
   font-weight: 600;
   border-radius: 44px;
@@ -1720,6 +1738,11 @@ a.prev, a.next {
   background-repeat: no-repeat;
 }
 
+#yandex-map {
+  width: 1200px;
+  height: 430px;
+}
+
 .map .container-center {
   position: relative;
   padding: 0;
@@ -1731,12 +1754,12 @@ a.prev, a.next {
   top: 50%;
   width: 302px;
   transform: translateY(-50%);
-  padding: 31px 25px;
+  padding: 27px 25px;
   background: #fefefe;
   border-radius: 13px;
   font-size: 14px;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 22px;
   color: #343434;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1749,11 +1772,11 @@ a.prev, a.next {
 }
 
 p.map-contacts-part1 {
-  margin-bottom: 22.33px;
+  margin-bottom: 16px;
 }
 
 p.map-contacts-part2 {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 .map-contacts-text-bold {
@@ -1764,7 +1787,7 @@ p.map-contacts-part2 {
 }
 
 .map-contacts-part2 .map-contacts-text-bold {
-   line-height: 22px;
+   line-height: 24px;
 }
 
 .map-contacts .btn-feedback{
@@ -1775,6 +1798,7 @@ p.map-contacts-part2 {
   font-size: 17px;
   font-weight: 600;
   line-height: 19.55px;
+  text-align: center;
 }
 
 /**--------------------- MAP-index.html only-------------------**/
@@ -1786,8 +1810,8 @@ p.map-contacts-part2 {
 .footer-social {
   float: left;
   width: 185px;
-  margin-right: 217.78px;
-  padding-top: 35.67px;
+  margin-right: 215px;
+  padding-top: 34px;
   padding-left: 1px;
   font-size: 0;
   -webkit-box-sizing: border-box;
@@ -1859,10 +1883,14 @@ opacity: 0.98
 .footer-about-us {
   float: left;
   position: relative;
-  padding-top: 35.67px;
+  width:331px ;
+  padding-top: 34px;
   padding-left: 21.66px;
   padding-bottom: 30px;
   font-size: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .about-us-column1, .about-us-column2 {
@@ -1893,7 +1921,7 @@ opacity: 0.98
 .footer-about-us::before {
   content: "";
   position: absolute;
-  top: 36.72px;
+  top: 34px;
   left: 0;
   width: 15px;
   height: 13px;
@@ -1905,7 +1933,7 @@ opacity: 0.98
   float: right;
   position: relative;
   width: 187.81px;
-  padding-top: 19.20px;
+  padding-top: 17px;
   font-size: 0;
   line-height: 0;
 }
@@ -1967,7 +1995,7 @@ opacity: 0.98
 
 .feedback-form legend {
   margin-bottom: 18px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 27px;
@@ -2015,7 +2043,7 @@ opacity: 0.98
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   color:#656565;
@@ -2050,7 +2078,7 @@ opacity: 0.98
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   color:#656565;

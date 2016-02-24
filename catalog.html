@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Gllacy Каталог</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style_min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <style>
   </style>
@@ -256,7 +256,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+          <a href="#"><span>Сливочное с апельсиновым<br>джемом и цитрусовой стружкой</span></a>
         </h3>
        </article>
 
@@ -273,7 +273,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a>
+          <a href="#"><span>Сливочно-кофейное с кусочками<br>шоколада</span></a>
         </h3>
       </article>
 
@@ -290,7 +290,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+          <a href="#"><span>Сливочно-клубничное с<br>присыпкой из белого шоколада</span></a>
         </h3>
       </article>
 
@@ -307,7 +307,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочное крем-брюле с карамельной подливкой</span></a>
+          <a href="#"><span>Сливочное крем-брюле с<br>карамельной подливкой</span></a>
         </h3>
       </article>
 
@@ -324,7 +324,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочное с брусничным джемом</span></a>
+          <a href="#"><span>Сливочное с брусничным<br>джемом</span></a>
         </h3>
       </article>
 
@@ -341,7 +341,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочно-черничное с цельными ягодами черники</span></a>
+          <a href="#"><span>Сливочно-черничное с цельными<br>ягодами черники</span></a>
         </h3>
       </article>
 
@@ -358,7 +358,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочно-лимонное с карамельной присыпкой</span></a>
+          <a href="#"><span>Сливочно-лимонное с<br>карамельной присыпкой</span></a>
         </h3>
       </article>
 
@@ -375,7 +375,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочное с шоколадной стружкой</span></a>
+          <a href="#"><span>Сливочное с шоколадной<br>стружкой</span></a>
         </h3>
       </article>
 
@@ -392,7 +392,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочно-ванильное с кусочками шоколада</span></a>
+          <a href="#"><span>Сливочно-ванильное с<br>кусочками шоколада</span></a>
         </h3>
       </article>
 
@@ -409,7 +409,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочноe с ментоловым сиропом</span></a>
+          <a href="#"><span>Сливочноe с ментоловым<br>сиропом</span></a>
         </h3>
       </article>
 
@@ -426,7 +426,7 @@
           </div>
         </div>
         <h3 class="icecream-title">
-          <a href="#"><span>Сливочное с кусочками черного шоколада</span></a>
+          <a href="#"><span>Сливочное с кусочками черного<br>шоколада</span></a>
         </h3>
       </article>
 
@@ -507,43 +507,8 @@
   </div>
 </footer>
 
-<script>
+  <script type="text/javascript" charset="utf-8" src="js/script.catalog.min.js"></script>
 
-  var userSearch = document.querySelector(".user-search");
-  var searchItem = userSearch.querySelector("[name=search-item]");
-  var userLogin = document.querySelector(".user-login");
-  var userLoginForm = document.querySelector(".user-login-form");
-  var emailLoginForm = userLoginForm.querySelector("[name=e-mail]");
-  var passwordLoginForm = userLoginForm.querySelector("[name=password]");
-  var storageEmail = localStorage.getItem("email");
-
-  userSearch.addEventListener("mouseenter", function(event) {
-    searchItem.focus();
-  });
-
-  userLogin.addEventListener("mouseenter", function(event) {
-    if (storageEmail) {
-      emailLoginForm.value = storageEmail;
-      passwordLoginForm.focus();}
-    else {
-      emailLoginForm.focus();
-    }
-  });
-
-  userLoginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-  });
-
-  userLoginForm.addEventListener("submit", function(event) {
-    if (!emailLoginForm || !passwordLoginForm) {
-      event.preventDefault();
-      console.log("Нужно ввести e-mail и пароль");}
-    else {
-      localStorage.setItem("email", emailLoginForm.value);
-    }
-  });
-
-</script>
 </body>
 </html>
 
